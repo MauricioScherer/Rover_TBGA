@@ -1,0 +1,50 @@
+Log: File reading events...
+subnet +++
+id:	
+x:	
+y:	
+label:	
+place:	  id:1  x:-58  y:-85  label:Place_1  tokens:0  isStatic:false
+place:	  id:3  x:49  y:3  label:Place_Final  tokens:0  isStatic:false
+place:	  id:4  x:-58  y:81  label:Place_2  tokens:10  isStatic:false
+transition:	  id:2  x:-57  y:2  label:Transition_X
+transition:	  id:5  x:-57  y:165  label:Transition_Y
+arc:	  type:regular  sourceId:1  destinationId:2  multiplicity:1
+arc:	  type:regular  sourceId:2  destinationId:3  multiplicity:1
+arc:	  type:regular  sourceId:4  destinationId:5  multiplicity:2
+arc:	  type:regular  sourceId:5  destinationId:3  multiplicity:2  breakPoint:50165
+
+
+Reference Places dictionary...
+Generated Arrays
+
+Places:
+id:1, lbl:Place_1, toks:0, conc:False
+id:3, lbl:Place_Final, toks:0, conc:False
+id:4, lbl:Place_2, toks:10, conc:False
+
+Transitions:
+id:2, lbl:Transition_X, enab:True
+id:5, lbl:Transition_Y, enab:True
+
+Connections:
+src:1, dst:2, type:Regular, mul:1
+src:2, dst:3, type:Regular, mul:1
+src:4, dst:5, type:Regular, mul:2
+src:5, dst:3, type:Regular, mul:2
+Generated Arrays
+
+Places:
+id:1, lbl:Place_1, toks:0, conc:False
+id:3, lbl:Place_Final, toks:0, conc:False
+id:4, lbl:Place_2, toks:10, conc:False
+
+Transitions:
+id:2, lbl:Transition_X, enab:True
+id:5, lbl:Transition_Y, enab:True
+
+Connections:
+src:1, dst:2, type:Regular, mul:1
+src:2, dst:3, type:Regular, mul:1
+src:4, dst:5, type:Regular, mul:2
+src:5, dst:3, type:Regular, mul:2
