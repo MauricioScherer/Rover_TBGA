@@ -1,0 +1,212 @@
+Log: File reading events...
+subnet +++
+id:	
+x:	
+y:	
+label:	
+place:	  id:1  x:-66  y:-41  label:Combustivel  tokens:100  isStatic:false
+place:	  id:3  x:226  y:-42  label:Deslocar  tokens:0  isStatic:false
+place:	  id:5  x:226  y:-112  label:Colisao  tokens:0  isStatic:false
+place:	  id:6  x:228  y:29  label:Resgatar  tokens:0  isStatic:false
+place:	  id:9  x:211  y:137  label:Escudo  tokens:0  isStatic:false
+place:	  id:10  x:18  y:490  label:Municao  tokens:30  isStatic:false
+place:	  id:11  x:17  y:321  label:Saude  tokens:50  isStatic:false
+place:	  id:13  x:-140  y:490  label:Atirar  tokens:0  isStatic:false
+place:	  id:14  x:-138  y:321  label:Dano  tokens:0  isStatic:false
+place:	  id:17  x:281  y:89  label:SoldadosResgatados  tokens:1  isStatic:false
+place:	  id:19  x:361  y:268  label:Portal  tokens:0  isStatic:false
+place:	  id:20  x:159  y:266  label:Fim  tokens:0  isStatic:false
+place:	  id:21  x:-301  y:-42  label:RecarregarCombustivel  tokens:0  isStatic:false
+place:	  id:23  x:199  y:490  label:RecarregarMunicao  tokens:0  isStatic:false
+place:	  id:32  x:100  y:212  label:TimerEscudo  tokens:0  isStatic:false
+place:	  id:34  x:-43  y:211  label:DesligarEscudo  tokens:0  isStatic:false
+transition:	  id:2  x:94  y:-42  label:
+transition:	  id:4  x:92  y:-112  label:
+transition:	  id:7  x:95  y:29  label:
+transition:	  id:8  x:99  y:135  label:
+transition:	  id:15  x:-62  y:489  label:
+transition:	  id:16  x:-59  y:321  label:
+transition:	  id:22  x:-207  y:-43  label:
+transition:	  id:25  x:115  y:490  label:
+transition:	  id:18  x:281  y:267  label:
+transition:	  id:33  x:22  y:212  label:
+arc:	  type:inhibitor  sourceId:32  destinationId:16  multiplicity:1  breakPoint:100377  breakPoint:-59376
+arc:	  type:inhibitor  sourceId:20  destinationId:18  multiplicity:1  breakPoint:210326  breakPoint:281326
+arc:	  type:inhibitor  sourceId:20  destinationId:33  multiplicity:1  breakPoint:22265
+arc:	  type:regular  sourceId:34  destinationId:33  multiplicity:1
+arc:	  type:regular  sourceId:32  destinationId:33  multiplicity:1
+arc:	  type:inhibitor  sourceId:32  destinationId:8  multiplicity:1  breakPoint:72177
+arc:	  type:regular  sourceId:8  destinationId:32  multiplicity:1  breakPoint:120176
+arc:	  type:inhibitor  sourceId:20  destinationId:15  multiplicity:1  breakPoint:161410  breakPoint:-62411
+arc:	  type:inhibitor  sourceId:20  destinationId:25  multiplicity:1  breakPoint:161411
+arc:	  type:inhibitor  sourceId:20  destinationId:16  multiplicity:1  breakPoint:-59264
+arc:	  type:inhibitor  sourceId:20  destinationId:22  multiplicity:1  breakPoint:-163262  breakPoint:-163-43
+arc:	  type:inhibitor  sourceId:20  destinationId:4  multiplicity:1  breakPoint:159-77
+arc:	  type:inhibitor  sourceId:20  destinationId:2  multiplicity:1  breakPoint:159-2
+arc:	  type:inhibitor  sourceId:20  destinationId:7  multiplicity:1  breakPoint:15964
+arc:	  type:regular  sourceId:17  destinationId:18  multiplicity:3
+arc:	  type:regular  sourceId:19  destinationId:18  multiplicity:1
+arc:	  type:regular  sourceId:18  destinationId:20  multiplicity:1
+arc:	  type:inhibitor  sourceId:20  destinationId:8  multiplicity:1  breakPoint:159167
+arc:	  type:regular  sourceId:25  destinationId:10  multiplicity:30  breakPoint:115432  breakPoint:61432
+arc:	  type:reset  sourceId:10  destinationId:25  multiplicity:1  breakPoint:58548  breakPoint:115549
+arc:	  type:regular  sourceId:23  destinationId:25  multiplicity:1
+arc:	  type:regular  sourceId:22  destinationId:1  multiplicity:100  breakPoint:-207-87  breakPoint:-139-87
+arc:	  type:reset  sourceId:1  destinationId:22  multiplicity:1  breakPoint:-13316  breakPoint:-20616
+arc:	  type:regular  sourceId:21  destinationId:22  multiplicity:1
+arc:	  type:regular  sourceId:7  destinationId:17  multiplicity:1  breakPoint:9688
+arc:	  type:regular  sourceId:13  destinationId:15  multiplicity:1
+arc:	  type:regular  sourceId:10  destinationId:15  multiplicity:1
+arc:	  type:regular  sourceId:11  destinationId:16  multiplicity:1
+arc:	  type:regular  sourceId:14  destinationId:16  multiplicity:1
+arc:	  type:regular  sourceId:9  destinationId:8  multiplicity:1
+arc:	  type:regular  sourceId:1  destinationId:8  multiplicity:5  breakPoint:-15136
+arc:	  type:regular  sourceId:6  destinationId:7  multiplicity:1
+arc:	  type:regular  sourceId:1  destinationId:7  multiplicity:2  breakPoint:-2130
+arc:	  type:regular  sourceId:1  destinationId:4  multiplicity:2  breakPoint:-24-111
+arc:	  type:regular  sourceId:5  destinationId:4  multiplicity:1
+arc:	  type:regular  sourceId:3  destinationId:2  multiplicity:1
+arc:	  type:regular  sourceId:1  destinationId:2  multiplicity:1
+
+
+Reference Places dictionary...
+Generated Arrays
+
+Places:
+id:1, lbl:Combustivel, toks:100, conc:False
+id:3, lbl:Deslocar, toks:0, conc:False
+id:5, lbl:Colisao, toks:0, conc:False
+id:6, lbl:Resgatar, toks:0, conc:False
+id:9, lbl:Escudo, toks:0, conc:False
+id:10, lbl:Municao, toks:30, conc:False
+id:11, lbl:Saude, toks:50, conc:False
+id:13, lbl:Atirar, toks:0, conc:False
+id:14, lbl:Dano, toks:0, conc:False
+id:17, lbl:SoldadosResgatados, toks:1, conc:False
+id:19, lbl:Portal, toks:0, conc:False
+id:20, lbl:Fim, toks:0, conc:False
+id:21, lbl:RecarregarCombustivel, toks:0, conc:False
+id:23, lbl:RecarregarMunicao, toks:0, conc:False
+id:32, lbl:TimerEscudo, toks:0, conc:False
+id:34, lbl:DesligarEscudo, toks:0, conc:False
+
+Transitions:
+id:2, lbl:, enab:True
+id:4, lbl:, enab:True
+id:7, lbl:, enab:True
+id:8, lbl:, enab:True
+id:15, lbl:, enab:True
+id:16, lbl:, enab:True
+id:22, lbl:, enab:True
+id:25, lbl:, enab:True
+id:18, lbl:, enab:True
+id:33, lbl:, enab:True
+
+Connections:
+src:32, dst:16, type:Inhibitor, mul:1
+src:20, dst:18, type:Inhibitor, mul:1
+src:20, dst:33, type:Inhibitor, mul:1
+src:34, dst:33, type:Regular, mul:1
+src:32, dst:33, type:Regular, mul:1
+src:32, dst:8, type:Inhibitor, mul:1
+src:8, dst:32, type:Regular, mul:1
+src:20, dst:15, type:Inhibitor, mul:1
+src:20, dst:25, type:Inhibitor, mul:1
+src:20, dst:16, type:Inhibitor, mul:1
+src:20, dst:22, type:Inhibitor, mul:1
+src:20, dst:4, type:Inhibitor, mul:1
+src:20, dst:2, type:Inhibitor, mul:1
+src:20, dst:7, type:Inhibitor, mul:1
+src:17, dst:18, type:Regular, mul:3
+src:19, dst:18, type:Regular, mul:1
+src:18, dst:20, type:Regular, mul:1
+src:20, dst:8, type:Inhibitor, mul:1
+src:25, dst:10, type:Regular, mul:30
+src:10, dst:25, type:Reset, mul:1
+src:23, dst:25, type:Regular, mul:1
+src:22, dst:1, type:Regular, mul:100
+src:1, dst:22, type:Reset, mul:1
+src:21, dst:22, type:Regular, mul:1
+src:7, dst:17, type:Regular, mul:1
+src:13, dst:15, type:Regular, mul:1
+src:10, dst:15, type:Regular, mul:1
+src:11, dst:16, type:Regular, mul:1
+src:14, dst:16, type:Regular, mul:1
+src:9, dst:8, type:Regular, mul:1
+src:1, dst:8, type:Regular, mul:5
+src:6, dst:7, type:Regular, mul:1
+src:1, dst:7, type:Regular, mul:2
+src:1, dst:4, type:Regular, mul:2
+src:5, dst:4, type:Regular, mul:1
+src:3, dst:2, type:Regular, mul:1
+src:1, dst:2, type:Regular, mul:1
+Generated Arrays
+
+Places:
+id:1, lbl:Combustivel, toks:100, conc:True
+id:3, lbl:Deslocar, toks:0, conc:False
+id:5, lbl:Colisao, toks:0, conc:False
+id:6, lbl:Resgatar, toks:0, conc:False
+id:9, lbl:Escudo, toks:0, conc:False
+id:10, lbl:Municao, toks:30, conc:True
+id:11, lbl:Saude, toks:50, conc:False
+id:13, lbl:Atirar, toks:0, conc:False
+id:14, lbl:Dano, toks:0, conc:False
+id:17, lbl:SoldadosResgatados, toks:1, conc:False
+id:19, lbl:Portal, toks:0, conc:False
+id:20, lbl:Fim, toks:0, conc:False
+id:21, lbl:RecarregarCombustivel, toks:0, conc:False
+id:23, lbl:RecarregarMunicao, toks:0, conc:False
+id:32, lbl:TimerEscudo, toks:0, conc:False
+id:34, lbl:DesligarEscudo, toks:0, conc:False
+
+Transitions:
+id:2, lbl:, enab:True
+id:4, lbl:, enab:True
+id:7, lbl:, enab:True
+id:8, lbl:, enab:True
+id:15, lbl:, enab:True
+id:16, lbl:, enab:True
+id:22, lbl:, enab:True
+id:25, lbl:, enab:True
+id:18, lbl:, enab:True
+id:33, lbl:, enab:True
+
+Connections:
+src:32, dst:16, type:Inhibitor, mul:1
+src:20, dst:18, type:Inhibitor, mul:1
+src:20, dst:33, type:Inhibitor, mul:1
+src:34, dst:33, type:Regular, mul:1
+src:32, dst:33, type:Regular, mul:1
+src:32, dst:8, type:Inhibitor, mul:1
+src:8, dst:32, type:Regular, mul:1
+src:20, dst:15, type:Inhibitor, mul:1
+src:20, dst:25, type:Inhibitor, mul:1
+src:20, dst:16, type:Inhibitor, mul:1
+src:20, dst:22, type:Inhibitor, mul:1
+src:20, dst:4, type:Inhibitor, mul:1
+src:20, dst:2, type:Inhibitor, mul:1
+src:20, dst:7, type:Inhibitor, mul:1
+src:17, dst:18, type:Regular, mul:3
+src:19, dst:18, type:Regular, mul:1
+src:18, dst:20, type:Regular, mul:1
+src:20, dst:8, type:Inhibitor, mul:1
+src:25, dst:10, type:Regular, mul:30
+src:10, dst:25, type:Reset, mul:1
+src:23, dst:25, type:Regular, mul:1
+src:22, dst:1, type:Regular, mul:100
+src:1, dst:22, type:Reset, mul:1
+src:21, dst:22, type:Regular, mul:1
+src:7, dst:17, type:Regular, mul:1
+src:13, dst:15, type:Regular, mul:1
+src:10, dst:15, type:Regular, mul:1
+src:11, dst:16, type:Regular, mul:1
+src:14, dst:16, type:Regular, mul:1
+src:9, dst:8, type:Regular, mul:1
+src:1, dst:8, type:Regular, mul:5
+src:6, dst:7, type:Regular, mul:1
+src:1, dst:7, type:Regular, mul:2
+src:1, dst:4, type:Regular, mul:2
+src:5, dst:4, type:Regular, mul:1
+src:3, dst:2, type:Regular, mul:1
+src:1, dst:2, type:Regular, mul:1
