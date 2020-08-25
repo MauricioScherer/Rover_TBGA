@@ -29,11 +29,11 @@ public class Rover : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Deslocar();
+            Move();
         }
     }
 
-    #region SetStatus
+    #region Status
     //life
     public void SetLife(int p_life)
     {
@@ -63,12 +63,39 @@ public class Rover : MonoBehaviour
     }
     #endregion
 
-    #region Events
-    private void Deslocar()
+    #region Shoot
+    private void Shoot()
     {
-        if(fuel > 0)
+        if (ammunition > 0)
         {
-            rover.GetPlaceByLabel("Deslocar").Tokens = 1;
+            ActiveToken("Atirar");
+            SetAmmunition(rover.GetPlaceByLabel("Municao").Tokens);
+        }
+        else
+        {
+            Debug.Log("Sem munição");
+        }
+    }
+    private void ReloadAmmo()
+    {
+        if (ammunition < 30)
+        {
+            ActiveToken("RecarregarMunicao");
+            SetAmmunition(rover.GetPlaceByLabel("Municao").Tokens);
+        }
+        else
+        {
+            Debug.Log("Munição cheia");
+        }
+    }
+    #endregion
+
+    #region Move
+    private void Move()
+    {
+        if (fuel > 0)
+        {
+            ActiveToken("Deslocar");
             SetFuel(rover.GetPlaceByLabel("Combustivel").Tokens);
         }
         else
@@ -76,17 +103,27 @@ public class Rover : MonoBehaviour
             Debug.Log("Sem combustivel");
         }
     }
-    private void Resgatar()
+    #endregion
+
+    #region Rescue
+    private void Rescue()
     {
         if (fuel > 1)
         {
-            rover.GetPlaceByLabel("Resgatar").Tokens = 1;
+            ActiveToken("Resgatar");
             SetFuel(rover.GetPlaceByLabel("Combustivel").Tokens);
         }
         else
         {
             Debug.Log("Precisa no mínimo de 2 unidades de combustivel para resgatar");
         }
+    }
+    #endregion
+
+    #region PetriNetRover
+    private void ActiveToken(string p_nameLabel)
+    {
+        rover.GetPlaceByLabel(p_nameLabel).Tokens = 1;
     }
     #endregion
 }
