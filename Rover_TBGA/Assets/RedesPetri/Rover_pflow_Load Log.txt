@@ -13,7 +13,7 @@ place:	  id:10  x:18  y:490  label:Municao  tokens:30  isStatic:false
 place:	  id:11  x:17  y:321  label:Saude  tokens:50  isStatic:false
 place:	  id:13  x:-140  y:490  label:Atirar  tokens:0  isStatic:false
 place:	  id:14  x:-138  y:321  label:Dano  tokens:0  isStatic:false
-place:	  id:17  x:281  y:89  label:SoldadosResgatados  tokens:1  isStatic:false
+place:	  id:17  x:281  y:89  label:SoldadosResgatados  tokens:0  isStatic:false
 place:	  id:19  x:361  y:268  label:Portal  tokens:0  isStatic:false
 place:	  id:20  x:159  y:266  label:Fim  tokens:0  isStatic:false
 place:	  id:21  x:-301  y:-42  label:RecarregarCombustivel  tokens:0  isStatic:false
@@ -82,7 +82,7 @@ id:10, lbl:Municao, toks:30, conc:False
 id:11, lbl:Saude, toks:50, conc:False
 id:13, lbl:Atirar, toks:0, conc:False
 id:14, lbl:Dano, toks:0, conc:False
-id:17, lbl:SoldadosResgatados, toks:1, conc:False
+id:17, lbl:SoldadosResgatados, toks:0, conc:False
 id:19, lbl:Portal, toks:0, conc:False
 id:20, lbl:Fim, toks:0, conc:False
 id:21, lbl:RecarregarCombustivel, toks:0, conc:False
@@ -152,7 +152,7 @@ id:10, lbl:Municao, toks:30, conc:True
 id:11, lbl:Saude, toks:50, conc:False
 id:13, lbl:Atirar, toks:0, conc:False
 id:14, lbl:Dano, toks:0, conc:False
-id:17, lbl:SoldadosResgatados, toks:1, conc:False
+id:17, lbl:SoldadosResgatados, toks:0, conc:False
 id:19, lbl:Portal, toks:0, conc:False
 id:20, lbl:Fim, toks:0, conc:False
 id:21, lbl:RecarregarCombustivel, toks:0, conc:False
