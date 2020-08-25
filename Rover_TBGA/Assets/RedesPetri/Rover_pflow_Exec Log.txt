@@ -141,6 +141,1112 @@ highest priority:-1
 highest priority:-1
 ### Concurrency verification...
 # Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
 highest priority:-1
 # Place 10,Municao
 highest priority:-1
@@ -417,6 +1523,993 @@ highest priority:-1
 highest priority:-1
 ### Concurrency verification...
 # Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:0
+# Transition count randomly selected:0
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
 highest priority:0
 # Transition count randomly selected:0
 # Place 10,Municao
@@ -543,8 +2636,417 @@ highest priority:-1
 highest priority:-1
 ### Concurrency verification...
 # Place 1,Combustivel
-highest priority:0
-# Transition count randomly selected:0
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
+# Place 10,Municao
+highest priority:-1
+### Concurrency verification...
+# Place 1,Combustivel
+highest priority:-1
 # Place 10,Municao
 highest priority:-1
 ### Concurrency verification...
