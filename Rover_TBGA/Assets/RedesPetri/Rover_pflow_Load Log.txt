@@ -4,22 +4,22 @@ id:
 x:	
 y:	
 label:	
-place:	  id:1  x:-66  y:-41  label:Combustivel  tokens:100  isStatic:false
-place:	  id:3  x:226  y:-42  label:Deslocar  tokens:0  isStatic:false
-place:	  id:5  x:226  y:-112  label:Colisao  tokens:0  isStatic:false
-place:	  id:6  x:228  y:29  label:Resgatar  tokens:0  isStatic:false
-place:	  id:9  x:211  y:137  label:Escudo  tokens:0  isStatic:false
-place:	  id:10  x:18  y:490  label:Municao  tokens:30  isStatic:false
-place:	  id:11  x:17  y:321  label:Saude  tokens:50  isStatic:false
-place:	  id:13  x:-140  y:490  label:Atirar  tokens:0  isStatic:false
-place:	  id:14  x:-138  y:321  label:Dano  tokens:0  isStatic:false
-place:	  id:17  x:281  y:89  label:SoldadosResgatados  tokens:0  isStatic:false
-place:	  id:19  x:361  y:268  label:Portal  tokens:0  isStatic:false
-place:	  id:20  x:159  y:266  label:Fim  tokens:0  isStatic:false
-place:	  id:21  x:-301  y:-42  label:RecarregarCombustivel  tokens:0  isStatic:false
-place:	  id:23  x:199  y:490  label:RecarregarMunicao  tokens:0  isStatic:false
-place:	  id:32  x:100  y:212  label:TimerEscudo  tokens:0  isStatic:false
-place:	  id:34  x:-43  y:211  label:DesligarEscudo  tokens:0  isStatic:false
+place:	  id:1  x:-66  y:-41  label:Fuel  tokens:100  isStatic:false
+place:	  id:3  x:226  y:-42  label:#Move  tokens:0  isStatic:false
+place:	  id:5  x:226  y:-112  label:#Collision  tokens:0  isStatic:false
+place:	  id:6  x:228  y:29  label:#Rescue  tokens:0  isStatic:false
+place:	  id:9  x:211  y:137  label:#Shield  tokens:0  isStatic:false
+place:	  id:10  x:18  y:490  label:Ammo  tokens:30  isStatic:false
+place:	  id:11  x:17  y:321  label:Life  tokens:50  isStatic:false
+place:	  id:13  x:-140  y:490  label:#Shoot  tokens:0  isStatic:false
+place:	  id:14  x:-138  y:321  label:#Damage  tokens:0  isStatic:false
+place:	  id:17  x:281  y:89  label:SoldierRescue  tokens:0  isStatic:false
+place:	  id:19  x:361  y:268  label:#Portal  tokens:0  isStatic:false
+place:	  id:20  x:159  y:266  label:Finish  tokens:0  isStatic:false
+place:	  id:21  x:-301  y:-43  label:#RechargeFuel  tokens:0  isStatic:false
+place:	  id:23  x:199  y:490  label:#RechargeAmmo  tokens:0  isStatic:false
+place:	  id:32  x:100  y:212  label:Timer Shield  tokens:0  isStatic:false
+place:	  id:34  x:-43  y:211  label:#OffShield  tokens:0  isStatic:false
 transition:	  id:2  x:94  y:-42  label:
 transition:	  id:4  x:92  y:-112  label:
 transition:	  id:7  x:95  y:29  label:
@@ -73,22 +73,22 @@ Reference Places dictionary...
 Generated Arrays
 
 Places:
-id:1, lbl:Combustivel, toks:100, conc:False
-id:3, lbl:Deslocar, toks:0, conc:False
-id:5, lbl:Colisao, toks:0, conc:False
-id:6, lbl:Resgatar, toks:0, conc:False
-id:9, lbl:Escudo, toks:0, conc:False
-id:10, lbl:Municao, toks:30, conc:False
-id:11, lbl:Saude, toks:50, conc:False
-id:13, lbl:Atirar, toks:0, conc:False
-id:14, lbl:Dano, toks:0, conc:False
-id:17, lbl:SoldadosResgatados, toks:0, conc:False
-id:19, lbl:Portal, toks:0, conc:False
-id:20, lbl:Fim, toks:0, conc:False
-id:21, lbl:RecarregarCombustivel, toks:0, conc:False
-id:23, lbl:RecarregarMunicao, toks:0, conc:False
-id:32, lbl:TimerEscudo, toks:0, conc:False
-id:34, lbl:DesligarEscudo, toks:0, conc:False
+id:1, lbl:Fuel, toks:100, conc:False
+id:3, lbl:#Move, toks:0, conc:False
+id:5, lbl:#Collision, toks:0, conc:False
+id:6, lbl:#Rescue, toks:0, conc:False
+id:9, lbl:#Shield, toks:0, conc:False
+id:10, lbl:Ammo, toks:30, conc:False
+id:11, lbl:Life, toks:50, conc:False
+id:13, lbl:#Shoot, toks:0, conc:False
+id:14, lbl:#Damage, toks:0, conc:False
+id:17, lbl:SoldierRescue, toks:0, conc:False
+id:19, lbl:#Portal, toks:0, conc:False
+id:20, lbl:Finish, toks:0, conc:False
+id:21, lbl:#RechargeFuel, toks:0, conc:False
+id:23, lbl:#RechargeAmmo, toks:0, conc:False
+id:32, lbl:Timer Shield, toks:0, conc:False
+id:34, lbl:#OffShield, toks:0, conc:False
 
 Transitions:
 id:2, lbl:, enab:True
@@ -143,22 +143,22 @@ src:1, dst:2, type:Regular, mul:1
 Generated Arrays
 
 Places:
-id:1, lbl:Combustivel, toks:100, conc:True
-id:3, lbl:Deslocar, toks:0, conc:False
-id:5, lbl:Colisao, toks:0, conc:False
-id:6, lbl:Resgatar, toks:0, conc:False
-id:9, lbl:Escudo, toks:0, conc:False
-id:10, lbl:Municao, toks:30, conc:True
-id:11, lbl:Saude, toks:50, conc:False
-id:13, lbl:Atirar, toks:0, conc:False
-id:14, lbl:Dano, toks:0, conc:False
-id:17, lbl:SoldadosResgatados, toks:0, conc:False
-id:19, lbl:Portal, toks:0, conc:False
-id:20, lbl:Fim, toks:0, conc:False
-id:21, lbl:RecarregarCombustivel, toks:0, conc:False
-id:23, lbl:RecarregarMunicao, toks:0, conc:False
-id:32, lbl:TimerEscudo, toks:0, conc:False
-id:34, lbl:DesligarEscudo, toks:0, conc:False
+id:1, lbl:Fuel, toks:100, conc:True
+id:3, lbl:#Move, toks:0, conc:False
+id:5, lbl:#Collision, toks:0, conc:False
+id:6, lbl:#Rescue, toks:0, conc:False
+id:9, lbl:#Shield, toks:0, conc:False
+id:10, lbl:Ammo, toks:30, conc:True
+id:11, lbl:Life, toks:50, conc:False
+id:13, lbl:#Shoot, toks:0, conc:False
+id:14, lbl:#Damage, toks:0, conc:False
+id:17, lbl:SoldierRescue, toks:0, conc:False
+id:19, lbl:#Portal, toks:0, conc:False
+id:20, lbl:Finish, toks:0, conc:False
+id:21, lbl:#RechargeFuel, toks:0, conc:False
+id:23, lbl:#RechargeAmmo, toks:0, conc:False
+id:32, lbl:Timer Shield, toks:0, conc:False
+id:34, lbl:#OffShield, toks:0, conc:False
 
 Transitions:
 id:2, lbl:, enab:True

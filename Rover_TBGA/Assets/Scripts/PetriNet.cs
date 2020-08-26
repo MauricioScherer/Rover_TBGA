@@ -1,5 +1,5 @@
 ﻿/*
- * RdP engine     version 0.4
+ * RdP engine     version 0.42
  *
  * supports PNEditor file format (pflow)
  * 
@@ -7,17 +7,17 @@
  *
  * Last modified  august 2020
  */
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
-public class PetriNet
+namespace RdPengine
+{
+    class PetriNet
     {
         private ArrayList placeList;
         private ArrayList transitionList;
@@ -27,7 +27,8 @@ public class PetriNet
         private Dictionary<int,int> refPlaces = new Dictionary<int, int>();
         private String logFilename_load;
         private String logFilename_exec;
-        
+
+        private Boolean somethingChanged;
 
         public PetriNet()
         {
@@ -35,6 +36,8 @@ public class PetriNet
             transitionList = new ArrayList();
             connList = new ArrayList();
             concPlaceList = new ArrayList();
+
+            somethingChanged = true;
         }
 
         public PetriNet(String filename)
@@ -43,6 +46,8 @@ public class PetriNet
             transitionList = new ArrayList();
             connList = new ArrayList();
             concPlaceList = new ArrayList();
+
+            somethingChanged = true;
 
             logFilename_load = filename.Replace('.','_') + "_Load Log.txt"; 
             logFilename_exec = filename.Replace('.','_') + "_Exec Log.txt";
@@ -62,6 +67,10 @@ public class PetriNet
             }
         }
 
+        public void ChangesOcurred()
+        {
+            somethingChanged = true;
+        }
         private Boolean SearchForInconsistencies()
         {
             Boolean foundProblems = false;
@@ -85,8 +94,22 @@ public class PetriNet
             return foundProblems;
         }
         
+        /*
+         * Execution methods
+         */
+        public void ExecUntillNothingMoreToDo()
+        {
+            while (ExecCycle());
+        }
         public Boolean ExecCycle()
         {
+            if (!somethingChanged)
+            {
+                //LogExec("\n >>>> >>>> >>>> nothing changed... ");
+                return false;
+            }
+                
+            
             Boolean somethingToDo = false;
             
             //SearchForInconsistencies();  
@@ -97,22 +120,25 @@ public class PetriNet
             //LogExec("\nTriggerable transitions -> BEFORE concurrency check: ");
             foreach (Transition t in transitionList)
             {
-               if(t.Triggerable = IsTriggerable(t)) somethingToDo = true;
-               //LogExec("  |" + t.Id + "," + t.Label + "|" + t.Triggerable);
+               if(t.Triggerable = IsTriggerable(t)) 
+                   somethingToDo = true;
             }
 
-            resolveConcurrencies();
+            if (somethingToDo) resolveConcurrencies();
             
             //LogExec("\nTriggerable transitions -> AFTER concurrency check: ");
             //foreach (Transition t in transitionList)   LogExec("  |" + t.Id + "," + t.Label + "|" + t.Triggerable);
             
             if (somethingToDo)
             {
+                //LogExec("\n #### #### #### something to do ... ");
                 //FIREs TRANSITIONS
                 foreach (Transition t in transitionList)
                 {
                     if (t.Triggerable && t.Enabled)
                     {
+                        //call all Transition Callback methods...
+                        t.ExecCallbacks();
                         try
                         {
                             //consume tokens from input places
@@ -133,7 +159,6 @@ public class PetriNet
 
                                 }
                             }
-
                             //generate tokens at output places
                             foreach (Connection c in connList)
                             {
@@ -152,6 +177,8 @@ public class PetriNet
                     
                 }
             }
+
+            somethingChanged = somethingToDo;
             return somethingToDo;
         }
 
@@ -189,10 +216,10 @@ public class PetriNet
 
         private void resolveConcurrencies()
         {
-            LogExec("\n### Concurrency verification...");
+            //LogExec("\n### Concurrency verification...");
             foreach (Place cp in concPlaceList)
             {
-                LogExec("\n# Place " + cp.ID + "," + cp.Label);
+                //LogExec("\n# Place " + cp.ID + "," + cp.Label);
                 Random rnd = new Random();
                 //Detects highest priority transitions
                 int highestPriority = -1;
@@ -217,7 +244,7 @@ public class PetriNet
                        } 
                     }
                 }
-                LogExec("\nhighest priority:" + highestPriority);
+                //LogExec("\nhighest priority:" + highestPriority);
                 
                 //sets only ONE transition as Triggerable (between all highest priority transitions)
                 //all other highest priority transitions are setted as non triggerable
@@ -226,7 +253,7 @@ public class PetriNet
                     //Selects (pseudo randomly) between highest priority transitions
                     int transitionSelected = rnd.Next(0,highestPriorityCounter);
                     int counter = 0;
-                    LogExec("\n# Transition count randomly selected:" + transitionSelected);
+                    //LogExec("\n# Transition count randomly selected:" + transitionSelected);
                     
                     foreach (Transition t in cp.GetConcTransitionsList())
                     {
@@ -237,14 +264,14 @@ public class PetriNet
                                 if (counter != transitionSelected)
                                 {
                                     t.Triggerable = false;
-                                    LogExec("\n# Triggerable set to false on " + t.Id + "," + t.Label);
+                                    //LogExec("\n# Triggerable set to false on " + t.Id + "," + t.Label);
                                 }
                                 counter++;
                             }
                             else
                             {
                                 t.Triggerable = false; 
-                                LogExec("\n# Triggerable set to false on " + t.Id + "," + t.Label);
+                                //LogExec("\n# Triggerable set to false on " + t.Id + "," + t.Label);
                             }
                         }
                     }
@@ -635,7 +662,7 @@ public class PetriNet
 
         private void ReadPlace(XmlNode locNode)
         {
-            Place place = new Place();
+            Place place = new Place(ChangesOcurred, ExecUntillNothingMoreToDo);
             InsertPlace(place);
             foreach (XmlNode locval in locNode)
             {
@@ -647,7 +674,11 @@ public class PetriNet
                 if (locval.Name == "label")
                     place.Label = locval.InnerText;
             }
-            
+            if (place.Label[0] == '#')
+            {
+                place.AutoExec = true;
+            }
+                
         }
         private void ReadRefPlace(XmlNode locNode)
         {
@@ -719,5 +750,4 @@ public class PetriNet
             }
         }
     }
-
-
+}

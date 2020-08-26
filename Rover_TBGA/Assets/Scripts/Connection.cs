@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+namespace RdPengine
+{
 public enum ArcTypes
 {
     Regular = 0,
@@ -12,7 +13,7 @@ public enum ArcTypes
     Reset = 2
 }
 
-public class Connection
+class Connection
 {
     public ArcTypes Type
     {
@@ -48,3 +49,5 @@ public class Connection
 
     }
 }
+}
+
