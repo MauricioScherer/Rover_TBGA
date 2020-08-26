@@ -12,7 +12,7 @@
             <id>1</id>
             <x>-66</x>
             <y>-41</y>
-            <label>Combustivel</label>
+            <label>Fuel</label>
             <tokens>100</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -20,7 +20,7 @@
             <id>3</id>
             <x>226</x>
             <y>-42</y>
-            <label>Deslocar</label>
+            <label>#Move</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -28,7 +28,7 @@
             <id>5</id>
             <x>226</x>
             <y>-112</y>
-            <label>Colisao</label>
+            <label>#Collision</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -36,7 +36,7 @@
             <id>6</id>
             <x>228</x>
             <y>29</y>
-            <label>Resgatar</label>
+            <label>#Rescue</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -44,7 +44,7 @@
             <id>9</id>
             <x>211</x>
             <y>137</y>
-            <label>Escudo</label>
+            <label>#Shield</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -52,7 +52,7 @@
             <id>10</id>
             <x>18</x>
             <y>490</y>
-            <label>Municao</label>
+            <label>Ammo</label>
             <tokens>30</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -60,7 +60,7 @@
             <id>11</id>
             <x>17</x>
             <y>321</y>
-            <label>Saude</label>
+            <label>Life</label>
             <tokens>50</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -68,7 +68,7 @@
             <id>13</id>
             <x>-140</x>
             <y>490</y>
-            <label>Atirar</label>
+            <label>#Shoot</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -76,7 +76,7 @@
             <id>14</id>
             <x>-138</x>
             <y>321</y>
-            <label>Dano</label>
+            <label>#Damage</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -84,7 +84,7 @@
             <id>17</id>
             <x>281</x>
             <y>89</y>
-            <label>SoldadosResgatados</label>
+            <label>SoldierRescue</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -92,7 +92,7 @@
             <id>19</id>
             <x>361</x>
             <y>268</y>
-            <label>Portal</label>
+            <label>#Portal</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -100,15 +100,15 @@
             <id>20</id>
             <x>159</x>
             <y>266</y>
-            <label>Fim</label>
+            <label>Finish</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
         <place>
             <id>21</id>
             <x>-301</x>
-            <y>-42</y>
-            <label>RecarregarCombustivel</label>
+            <y>-43</y>
+            <label>#RechargeFuel</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -116,7 +116,7 @@
             <id>23</id>
             <x>199</x>
             <y>490</y>
-            <label>RecarregarMunicao</label>
+            <label>#RechargeAmmo</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -124,7 +124,7 @@
             <id>32</id>
             <x>100</x>
             <y>212</y>
-            <label>TimerEscudo</label>
+            <label>Timer Shield</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>
@@ -132,7 +132,7 @@
             <id>34</id>
             <x>-43</x>
             <y>211</y>
-            <label>DesligarEscudo</label>
+            <label>#OffShield</label>
             <tokens>0</tokens>
             <isStatic>false</isStatic>
         </place>

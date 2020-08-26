@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using RdPengine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Robo : MonoBehaviour
 {
-    public PetriNet robo;
+    PetriNet robo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +15,7 @@ public class Robo : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        robo.ExecCycle();
-        
+    {        
         
     }
 }
