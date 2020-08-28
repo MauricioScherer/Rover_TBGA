@@ -13,10 +13,16 @@ public class Rover : MonoBehaviour
     private Place _fuel;
     private Place _ammo;
     private Place _life;
+
     [Header("Status")]
+    public GameObject roverPng;
     public Text fuel;
     public Text ammo;
     public Text life;
+
+    [Header("Pool Shoot")]
+    public PoolShoot pool;
+    public Transform spawnShoot;
 
     void Start()
     {
@@ -41,22 +47,47 @@ public class Rover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
+            roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.2f);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
+            roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.2f);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
-            transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+            roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
+            transform.position = new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
-            transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
+            roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
+            transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z);
+        }
+
+        //tiro temporario
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(_ammo.Tokens > 0)
+            {
+                _rover.GetPlaceByLabel("#Shoot").Tokens = 1;
+                GameObject _shoot = pool.ActiveShoot();
+
+                if(_shoot != null)
+                {
+                    _shoot.transform.position = spawnShoot.transform.position;
+                    _shoot.transform.rotation = spawnShoot.transform.rotation;
+                    _shoot.SetActive(true);
+                }
+            }
+            else
+            {
+                Debug.Log("Sem munição");
+            }
         }
     }
 
@@ -65,5 +96,24 @@ public class Rover : MonoBehaviour
         life.text = "Vida: " + _life.Tokens.ToString();
         fuel.text = "Combustivel: " + _fuel.Tokens.ToString();
         ammo.text = "Munição: " + _ammo.Tokens.ToString();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Ammo"))
+        {
+            _rover.GetPlaceByLabel("#RechargeAmmo").Tokens = 1;
+            Debug.Log("Recarregou Municao");
+        }
+        else if(other.CompareTag("Fuel"))
+        {
+            _rover.GetPlaceByLabel("#RechargeFuel").Tokens = 1;
+            Debug.Log("Recarregou Gasolina");
+        }
+        else if (other.CompareTag("Parede"))
+        {
+            _rover.GetPlaceByLabel("#Collision").Tokens = 1;
+            Debug.Log("Colidiu");
+        }
     }
 }
