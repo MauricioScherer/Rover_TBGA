@@ -1,0 +1,183 @@
+Log: File reading events...
+subnet +++
+id:	
+x:	
+y:	
+label:	
+place:	  id:21  x:75  y:-78  label:#Idle  tokens:0  isStatic:false
+place:	  id:19  x:357  y:-287  label:Life  tokens:10  isStatic:false
+place:	  id:12  x:357  y:-70  label:#Proximity  tokens:0  isStatic:false
+place:	  id:18  x:158  y:-285  label:#Damage  tokens:0  isStatic:false
+place:	  id:15  x:469  y:-159  label:#Fire  tokens:0  isStatic:false
+place:	  id:17  x:261  y:-161  label:Finish  tokens:0  isStatic:false
+place:	  id:29  x:71  y:-224  label:Move  tokens:0  isStatic:false
+transition:	  id:22  x:157  y:-161  label:
+transition:	  id:20  x:261  y:-285  label:
+transition:	  id:16  x:357  y:-159  label:
+transition:	  id:7  x:262  y:-70  label:
+arc:	  type:regular  sourceId:29  destinationId:22  multiplicity:1
+arc:	  type:inhibitor  sourceId:21  destinationId:22  multiplicity:1
+arc:	  type:regular  sourceId:19  destinationId:20  multiplicity:1
+arc:	  type:inhibitor  sourceId:17  destinationId:7  multiplicity:1
+arc:	  type:inhibitor  sourceId:17  destinationId:16  multiplicity:1
+arc:	  type:regular  sourceId:12  destinationId:7  multiplicity:1
+arc:	  type:regular  sourceId:12  destinationId:16  multiplicity:1
+arc:	  type:regular  sourceId:15  destinationId:16  multiplicity:1
+arc:	  type:inhibitor  sourceId:17  destinationId:20  multiplicity:1
+arc:	  type:regular  sourceId:18  destinationId:20  multiplicity:1
+arc:	  type:inhibitor  sourceId:17  destinationId:22  multiplicity:1
+subnet:	
+ +++ +++
+|	id:	
+|	x:	
+|	y:	
+|	label:	
+|	place:	  id:60  x:82  y:0  label:#Right  tokens:0  isStatic:false
+|	place:	  id:63  x:-43  y:-128  label:#Up  tokens:0  isStatic:false
+|	place:	  id:58  x:-40  y:108  label:#Down  tokens:0  isStatic:false
+|	place:	  id:62  x:-164  y:-7  label:#Left  tokens:0  isStatic:false
+|	transition:	  id:61  x:-41  y:-59  label:
+|	transition:	  id:65  x:20  y:0  label:
+|	transition:	  id:59  x:-40  y:54  label:
+|	transition:	  id:64  x:-98  y:-4  label:
+|	arc:	  type:regular  sourceId:59  destinationId:66  multiplicity:1
+|	arc:	  type:regular  sourceId:65  destinationId:66  multiplicity:1
+|	arc:	  type:regular  sourceId:64  destinationId:66  multiplicity:1
+|	arc:	  type:regular  sourceId:61  destinationId:66  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:58  destinationId:64  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:63  destinationId:59  multiplicity:1  breakPoint:121-126  breakPoint:12156
+|	arc:	  type:inhibitor  sourceId:63  destinationId:65  multiplicity:1
+|	arc:	  type:regular  sourceId:58  destinationId:59  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:60  destinationId:59  multiplicity:1
+|	arc:	  type:regular  sourceId:62  destinationId:64  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:58  destinationId:61  multiplicity:1  breakPoint:-229104  breakPoint:-229-62
+|	arc:	  type:regular  sourceId:60  destinationId:65  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:63  destinationId:64  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:62  destinationId:59  multiplicity:1
+|	arc:	  type:regular  sourceId:63  destinationId:61  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:60  destinationId:64  multiplicity:1  breakPoint:83156  breakPoint:-99154
+|	arc:	  type:inhibitor  sourceId:62  destinationId:65  multiplicity:1  breakPoint:-164-160  breakPoint:21-159
+|	arc:	  type:inhibitor  sourceId:62  destinationId:61  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:58  destinationId:65  multiplicity:1
+|	arc:	  type:inhibitor  sourceId:60  destinationId:61  multiplicity:1
+|	referencePlace:	  >>>  id 66  >>>  x -39  >>>  y -4  >>>  connectedPlaceId 29
+
+referenceArc:	
+
+
+Reference Places dictionary...
+: 66, 29
+Generated Arrays
+
+Places:
+id:21, lbl:#Idle, toks:0, conc:False
+id:19, lbl:Life, toks:10, conc:False
+id:12, lbl:#Proximity, toks:0, conc:False
+id:18, lbl:#Damage, toks:0, conc:False
+id:15, lbl:#Fire, toks:0, conc:False
+id:17, lbl:Finish, toks:0, conc:False
+id:29, lbl:Move, toks:0, conc:False
+id:60, lbl:#Right, toks:0, conc:False
+id:63, lbl:#Up, toks:0, conc:False
+id:58, lbl:#Down, toks:0, conc:False
+id:62, lbl:#Left, toks:0, conc:False
+
+Transitions:
+id:22, lbl:, enab:True
+id:20, lbl:, enab:True
+id:16, lbl:, enab:True
+id:7, lbl:, enab:True
+id:61, lbl:, enab:True
+id:65, lbl:, enab:True
+id:59, lbl:, enab:True
+id:64, lbl:, enab:True
+
+Connections:
+src:29, dst:22, type:Regular, mul:1
+src:21, dst:22, type:Inhibitor, mul:1
+src:19, dst:20, type:Regular, mul:1
+src:17, dst:7, type:Inhibitor, mul:1
+src:17, dst:16, type:Inhibitor, mul:1
+src:12, dst:7, type:Regular, mul:1
+src:12, dst:16, type:Regular, mul:1
+src:15, dst:16, type:Regular, mul:1
+src:17, dst:20, type:Inhibitor, mul:1
+src:18, dst:20, type:Regular, mul:1
+src:17, dst:22, type:Inhibitor, mul:1
+src:59, dst:66, type:Regular, mul:1
+src:65, dst:66, type:Regular, mul:1
+src:64, dst:66, type:Regular, mul:1
+src:61, dst:66, type:Regular, mul:1
+src:58, dst:64, type:Inhibitor, mul:1
+src:63, dst:59, type:Inhibitor, mul:1
+src:63, dst:65, type:Inhibitor, mul:1
+src:58, dst:59, type:Regular, mul:1
+src:60, dst:59, type:Inhibitor, mul:1
+src:62, dst:64, type:Regular, mul:1
+src:58, dst:61, type:Inhibitor, mul:1
+src:60, dst:65, type:Regular, mul:1
+src:63, dst:64, type:Inhibitor, mul:1
+src:62, dst:59, type:Inhibitor, mul:1
+src:63, dst:61, type:Regular, mul:1
+src:60, dst:64, type:Inhibitor, mul:1
+src:62, dst:65, type:Inhibitor, mul:1
+src:62, dst:61, type:Inhibitor, mul:1
+src:58, dst:65, type:Inhibitor, mul:1
+src:60, dst:61, type:Inhibitor, mul:1
+Generated Arrays
+
+Places:
+id:21, lbl:#Idle, toks:0, conc:False
+id:19, lbl:Life, toks:10, conc:False
+id:12, lbl:#Proximity, toks:0, conc:True
+id:18, lbl:#Damage, toks:0, conc:False
+id:15, lbl:#Fire, toks:0, conc:False
+id:17, lbl:Finish, toks:0, conc:False
+id:29, lbl:Move, toks:0, conc:False
+id:60, lbl:#Right, toks:0, conc:False
+id:63, lbl:#Up, toks:0, conc:False
+id:58, lbl:#Down, toks:0, conc:False
+id:62, lbl:#Left, toks:0, conc:False
+
+Transitions:
+id:22, lbl:, enab:True
+id:20, lbl:, enab:True
+id:16, lbl:, enab:True
+id:7, lbl:, enab:True
+id:61, lbl:, enab:True
+id:65, lbl:, enab:True
+id:59, lbl:, enab:True
+id:64, lbl:, enab:True
+
+Connections:
+src:29, dst:22, type:Regular, mul:1
+src:21, dst:22, type:Inhibitor, mul:1
+src:19, dst:20, type:Regular, mul:1
+src:17, dst:7, type:Inhibitor, mul:1
+src:17, dst:16, type:Inhibitor, mul:1
+src:12, dst:7, type:Regular, mul:1
+src:12, dst:16, type:Regular, mul:1
+src:15, dst:16, type:Regular, mul:1
+src:17, dst:20, type:Inhibitor, mul:1
+src:18, dst:20, type:Regular, mul:1
+src:17, dst:22, type:Inhibitor, mul:1
+src:59, dst:29, type:Regular, mul:1
+src:65, dst:29, type:Regular, mul:1
+src:64, dst:29, type:Regular, mul:1
+src:61, dst:29, type:Regular, mul:1
+src:58, dst:64, type:Inhibitor, mul:1
+src:63, dst:59, type:Inhibitor, mul:1
+src:63, dst:65, type:Inhibitor, mul:1
+src:58, dst:59, type:Regular, mul:1
+src:60, dst:59, type:Inhibitor, mul:1
+src:62, dst:64, type:Regular, mul:1
+src:58, dst:61, type:Inhibitor, mul:1
+src:60, dst:65, type:Regular, mul:1
+src:63, dst:64, type:Inhibitor, mul:1
+src:62, dst:59, type:Inhibitor, mul:1
+src:63, dst:61, type:Regular, mul:1
+src:60, dst:64, type:Inhibitor, mul:1
+src:62, dst:65, type:Inhibitor, mul:1
+src:62, dst:61, type:Inhibitor, mul:1
+src:58, dst:65, type:Inhibitor, mul:1
+src:60, dst:61, type:Inhibitor, mul:1
