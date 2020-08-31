@@ -110,10 +110,10 @@ public class Rover : MonoBehaviour
             _rover.GetPlaceByLabel("#RechargeFuel").Tokens = 1;
             Debug.Log("Recarregou Gasolina");
         }
-        else if (other.CompareTag("Parede"))
-        {
-            _rover.GetPlaceByLabel("#Collision").Tokens = 1;
-            Debug.Log("Colidiu");
-        }
+        //else if (other.CompareTag("Parede"))
+        //{
+        //    _rover.GetPlaceByLabel("#Collision").Tokens = 1;
+        //    Debug.Log("Colidiu");
+        //}
     }
 }

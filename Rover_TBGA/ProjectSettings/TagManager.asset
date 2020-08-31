@@ -8,6 +8,7 @@ TagManager:
   - Fuel
   - Collision
   - Enemy
+  - Shoot
   layers:
   - Default
   - TransparentFX
