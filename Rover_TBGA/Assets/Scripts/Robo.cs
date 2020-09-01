@@ -10,7 +10,7 @@ public class Robo : MonoBehaviour
     private PetriNet _robot;
     private int directionChoice;
     private float count;
-    private bool isMoving;
+    private bool isMoving = true;
     private Vector3 target;
 
     //status Rover
@@ -20,7 +20,8 @@ public class Robo : MonoBehaviour
     public GameObject robotPng;
     public Image lifeBar;
     public float speed;
-    public int timeIsMoving;
+    public float timeSleepMin;
+    public float timeSleepMax;
 
     [Header("Shoot")]
     public GameObject Shoot;
@@ -45,34 +46,22 @@ public class Robo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isMoving)
-        {
-            transform.Translate(target * speed * Time.deltaTime);
-
-            count++;
-            if(count >= timeIsMoving)
-            {
-                count = 0;
-                isMoving = false;
-                RandomDirection();
-            }
-        }
-        else
-        {
-            //atirando
-        }
-        //count -= Time.deltaTime;
-        //if (count < 0)
+        //if(isMoving)
         //{
-        //    count = timer;
-        //    isIdle = !isIdle;
-        //    if (isIdle == true) _robot.GetPlaceByLabel("#Idle").Tokens = 1;
-        //    if (_robot.GetPlaceByLabel("#Idle").IsEmpty() == true) RandomDirection();
+        //    transform.Translate(target * speed * Time.deltaTime);
+
+        //    count++;
+        //    if(count >= timeIsMoving)
+        //    {
+        //        count = 0;
+        //        isMoving = false;
+        //        RandomDirection();
+        //    }
         //}
-
-        // como fazer a vida aparecer acima do personagem??
-        //life.transform.position = new Vector3(robotPng.transform.position.x, robotPng.transform.position.y, robotPng.transform.position.z);
-
+        //else
+        //{
+        //    //atirando
+        //}
     }
 
     public void RefreshTextos()
@@ -87,35 +76,51 @@ public class Robo : MonoBehaviour
 
     public void RandomDirection()
     {
-        directionChoice = Random.Range(1, 5);
-
-        switch (directionChoice)
+        if(isMoving)
         {
-            case 1:
-                _robot.GetPlaceByLabel("#Up").Tokens = 1;
-                target = Vector3.up;
-                robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
-                break;
-            case 2:
-                _robot.GetPlaceByLabel("#Down").Tokens = 1;
-                target = Vector3.down;
-                robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
-                break;
-            case 3:
-                _robot.GetPlaceByLabel("#Right").Tokens = 1;
-                target = Vector3.right;
-                robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
-                break;
-            case 4:
-                _robot.GetPlaceByLabel("#Left").Tokens = 1;
-                target = Vector3.left;
-                robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
-                break;
+            directionChoice = Random.Range(1, 5);
+
+            switch (directionChoice)
+            {
+                case 1:
+                    _robot.GetPlaceByLabel("#Up").Tokens = 1;
+                    //target = Vector3.up;
+                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
+                    break;
+                case 2:
+                    _robot.GetPlaceByLabel("#Down").Tokens = 1;
+                    //target = Vector3.down;
+                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.0f);
+                    break;
+                case 3:
+                    _robot.GetPlaceByLabel("#Right").Tokens = 1;
+                    //target = Vector3.right;
+                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
+                    transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z);
+                    break;
+                case 4:
+                    _robot.GetPlaceByLabel("#Left").Tokens = 1;
+                    //target = Vector3.left;
+                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
+                    transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z);
+                    break;
+            }
+
+            float time0 = timeSleepMin;
+            float time1 = timeSleepMax;
+            float time = Random.Range(time0, time1);
+            Invoke("RandomDirection", time);
+        }
+        else
+        {
+            //aqui é atirando no player
         }
 
-        timeIsMoving = Random.Range(30, 120);
+        //timeIsMoving = Random.Range(30, 120);
 
-        isMoving = true;
+        //isMoving = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -123,6 +128,7 @@ public class Robo : MonoBehaviour
         if(other.CompareTag("Shoot"))
         {
             _robot.GetPlaceByLabel("#Damage").Tokens = 1;
+            other.gameObject.SetActive(false);
         }
     }
 
