@@ -9,6 +9,8 @@ TagManager:
   - Collision
   - Enemy
   - Shoot
+  - Grid
+  - Robo
   layers:
   - Default
   - TransparentFX

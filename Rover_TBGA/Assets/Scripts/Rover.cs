@@ -48,25 +48,25 @@ public class Rover : MonoBehaviour
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
             roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.2f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
             roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.2f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.0f);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
             roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
-            transform.position = new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             _rover.GetPlaceByLabel("#Move").Tokens = 1;
             roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
-            transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z);
         }
 
         //tiro temporario
