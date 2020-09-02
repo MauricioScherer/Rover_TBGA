@@ -14,6 +14,8 @@ public class Rover : MonoBehaviour
     private Place _ammo;
     private Place _life;
 
+    private bool _canShoot;
+
     [Header("Status")]
     public GameObject roverPng;
     public Text fuel;
@@ -39,6 +41,17 @@ public class Rover : MonoBehaviour
         _life.AddCallback(RefreshTextos, "refreshLife", Tokens.InOrOut);
 
         RefreshTextos();
+    }
+
+    public void Move(string p_direction)
+    {
+        _rover.GetPlaceByLabel("#Move").Tokens = 1;
+
+        if(p_direction == "Right")
+        {
+            roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
+        }
     }
 
     void Update()
@@ -70,23 +83,30 @@ public class Rover : MonoBehaviour
         }
 
         //tiro temporario
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(_ammo.Tokens > 0)
+            if(_canShoot)
             {
-                _rover.GetPlaceByLabel("#Shoot").Tokens = 1;
-                GameObject _shoot = pool.ActiveShoot();
-
-                if(_shoot != null)
+                if (_ammo.Tokens > 0)
                 {
-                    _shoot.transform.position = spawnShoot.transform.position;
-                    _shoot.transform.rotation = spawnShoot.transform.rotation;
-                    _shoot.SetActive(true);
+                    _rover.GetPlaceByLabel("#Shoot").Tokens = 1;
+                    GameObject _shoot = pool.ActiveShoot();
+
+                    if (_shoot != null)
+                    {
+                        _shoot.transform.position = spawnShoot.transform.position;
+                        _shoot.transform.rotation = spawnShoot.transform.rotation;
+                        _shoot.SetActive(true);
+                    }
+                }
+                else
+                {
+                    Debug.Log("Sem munição");
                 }
             }
             else
             {
-                Debug.Log("Sem munição");
+                Debug.Log("não pode atirar de longe");
             }
         }
     }
@@ -115,5 +135,10 @@ public class Rover : MonoBehaviour
         //    _rover.GetPlaceByLabel("#Collision").Tokens = 1;
         //    Debug.Log("Colidiu");
         //}
+    }
+
+    public void SetCanSHoot(bool p_status)
+    {
+        _canShoot = p_status;
     }
 }
