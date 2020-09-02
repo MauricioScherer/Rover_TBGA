@@ -25,7 +25,7 @@ public class Shoot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Collision"))
-            gameObject.SetActive(false);
+        //if(other.CompareTag("Collision"))
+        //    gameObject.SetActive(false);
     }
 }

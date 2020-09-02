@@ -27,6 +27,11 @@ public class MapGenerator : MonoBehaviour
         {
             GenerateMap();
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log(map[width / 2, height / 2]);
+        }
     }
 
     void GenerateMap()
@@ -255,6 +260,8 @@ public class MapGenerator : MonoBehaviour
             }
         }
     }
+
+    
 
     void SmoothMap()
     {

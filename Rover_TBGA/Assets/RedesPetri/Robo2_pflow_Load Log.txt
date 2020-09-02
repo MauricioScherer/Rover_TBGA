@@ -6,20 +6,28 @@ y:
 label:	
 place:	  id:150  x:-77  y:0  label:#Proximity  tokens:0  isStatic:false
 place:	  id:146  x:-201  y:-5  label:#Left  tokens:0  isStatic:false
-place:	  id:151  x:249  y:-64  label:Life  tokens:3  isStatic:false
+place:	  id:151  x:243  y:33  label:Life  tokens:3  isStatic:false
 place:	  id:144  x:45  y:2  label:#Right  tokens:0  isStatic:false
 place:	  id:142  x:-77  y:110  label:#Down  tokens:0  isStatic:false
-place:	  id:153  x:153  y:13  label:#Damage  tokens:0  isStatic:false
+place:	  id:153  x:164  y:105  label:#Damage  tokens:0  isStatic:false
 place:	  id:148  x:-80  y:-126  label:#Up  tokens:0  isStatic:false
-place:	  id:154  x:159  y:179  label:#Reset  tokens:0  isStatic:false
+place:	  id:154  x:-308  y:206  label:#Reset  tokens:0  isStatic:false
+place:	  id:156  x:238  y:-129  label:Ammo  tokens:30  isStatic:false
+place:	  id:158  x:167  y:-53  label:#shoot  tokens:0  isStatic:false
+place:	  id:161  x:-328  y:-121  label:Fuel  tokens:100  isStatic:false
+place:	  id:165  x:-416  y:-228  label:#ReloadFuel  tokens:0  isStatic:false
+place:	  id:168  x:387  y:-130  label:#reloadAmmo  tokens:0  isStatic:false
 transition:	  id:149  x:-77  y:56  label:
-transition:	  id:152  x:153  y:-65  label:
+transition:	  id:152  x:165  y:33  label:
 transition:	  id:147  x:-135  y:-2  label:
 transition:	  id:143  x:-17  y:2  label:
 transition:	  id:145  x:-78  y:-57  label:
-transition:	  id:155  x:160  y:113  label:
+transition:	  id:155  x:-308  y:134  label:
+transition:	  id:157  x:167  y:-129  label:
+transition:	  id:163  x:-325  y:-227  label:
+transition:	  id:167  x:315  y:-130  label:
 arc:	  type:regular  sourceId:154  destinationId:155  multiplicity:1
-arc:	  type:regular  sourceId:150  destinationId:155  multiplicity:1  breakPoint:86114
+arc:	  type:regular  sourceId:150  destinationId:155  multiplicity:1  breakPoint:-240134
 arc:	  type:regular  sourceId:144  destinationId:143  multiplicity:1
 arc:	  type:regular  sourceId:146  destinationId:147  multiplicity:1
 arc:	  type:inhibitor  sourceId:150  destinationId:145  multiplicity:1
@@ -42,6 +50,20 @@ arc:	  type:inhibitor  sourceId:144  destinationId:145  multiplicity:1
 arc:	  type:inhibitor  sourceId:148  destinationId:149  multiplicity:1  breakPoint:84-124  breakPoint:8458
 arc:	  type:inhibitor  sourceId:148  destinationId:147  multiplicity:1
 arc:	  type:regular  sourceId:142  destinationId:149  multiplicity:1
+arc:	  type:regular  sourceId:156  destinationId:157  multiplicity:1
+arc:	  type:regular  sourceId:158  destinationId:157  multiplicity:1
+arc:	  type:regular  sourceId:150  destinationId:157  multiplicity:1  breakPoint:100-128
+arc:	  type:regular  sourceId:157  destinationId:150  multiplicity:1  breakPoint:167-180  breakPoint:73-180
+arc:	  type:regular  sourceId:161  destinationId:147  multiplicity:1  breakPoint:-137-120
+arc:	  type:regular  sourceId:161  destinationId:145  multiplicity:1  breakPoint:-137-119
+arc:	  type:regular  sourceId:161  destinationId:149  multiplicity:1  breakPoint:-32753
+arc:	  type:regular  sourceId:161  destinationId:143  multiplicity:1  breakPoint:-392-121  breakPoint:-392251  breakPoint:-21252
+arc:	  type:regular  sourceId:163  destinationId:161  multiplicity:100  breakPoint:-274-227  breakPoint:-274-171
+arc:	  type:regular  sourceId:165  destinationId:163  multiplicity:1
+arc:	  type:regular  sourceId:167  destinationId:156  multiplicity:30  breakPoint:314-188  breakPoint:238-189
+arc:	  type:regular  sourceId:168  destinationId:167  multiplicity:1
+arc:	  type:inhibitor  sourceId:156  destinationId:167  multiplicity:1  breakPoint:237-81  breakPoint:314-81
+arc:	  type:inhibitor  sourceId:161  destinationId:163  multiplicity:1  breakPoint:-324-112
 
 
 Reference Places dictionary...
@@ -56,6 +78,11 @@ id:142, lbl:#Down, toks:0, conc:False
 id:153, lbl:#Damage, toks:0, conc:False
 id:148, lbl:#Up, toks:0, conc:False
 id:154, lbl:#Reset, toks:0, conc:False
+id:156, lbl:Ammo, toks:30, conc:False
+id:158, lbl:#shoot, toks:0, conc:False
+id:161, lbl:Fuel, toks:100, conc:False
+id:165, lbl:#ReloadFuel, toks:0, conc:False
+id:168, lbl:#reloadAmmo, toks:0, conc:False
 
 Transitions:
 id:149, lbl:, enab:True
@@ -64,6 +91,9 @@ id:147, lbl:, enab:True
 id:143, lbl:, enab:True
 id:145, lbl:, enab:True
 id:155, lbl:, enab:True
+id:157, lbl:, enab:True
+id:163, lbl:, enab:True
+id:167, lbl:, enab:True
 
 Connections:
 src:154, dst:155, type:Regular, mul:1
@@ -90,10 +120,24 @@ src:144, dst:145, type:Inhibitor, mul:1
 src:148, dst:149, type:Inhibitor, mul:1
 src:148, dst:147, type:Inhibitor, mul:1
 src:142, dst:149, type:Regular, mul:1
+src:156, dst:157, type:Regular, mul:1
+src:158, dst:157, type:Regular, mul:1
+src:150, dst:157, type:Regular, mul:1
+src:157, dst:150, type:Regular, mul:1
+src:161, dst:147, type:Regular, mul:1
+src:161, dst:145, type:Regular, mul:1
+src:161, dst:149, type:Regular, mul:1
+src:161, dst:143, type:Regular, mul:1
+src:163, dst:161, type:Regular, mul:100
+src:165, dst:163, type:Regular, mul:1
+src:167, dst:156, type:Regular, mul:30
+src:168, dst:167, type:Regular, mul:1
+src:156, dst:167, type:Inhibitor, mul:1
+src:161, dst:163, type:Inhibitor, mul:1
 Generated Arrays
 
 Places:
-id:150, lbl:#Proximity, toks:0, conc:False
+id:150, lbl:#Proximity, toks:0, conc:True
 id:146, lbl:#Left, toks:0, conc:False
 id:151, lbl:Life, toks:3, conc:False
 id:144, lbl:#Right, toks:0, conc:False
@@ -101,6 +145,11 @@ id:142, lbl:#Down, toks:0, conc:False
 id:153, lbl:#Damage, toks:0, conc:False
 id:148, lbl:#Up, toks:0, conc:False
 id:154, lbl:#Reset, toks:0, conc:False
+id:156, lbl:Ammo, toks:30, conc:False
+id:158, lbl:#shoot, toks:0, conc:False
+id:161, lbl:Fuel, toks:100, conc:True
+id:165, lbl:#ReloadFuel, toks:0, conc:False
+id:168, lbl:#reloadAmmo, toks:0, conc:False
 
 Transitions:
 id:149, lbl:, enab:True
@@ -109,6 +158,9 @@ id:147, lbl:, enab:True
 id:143, lbl:, enab:True
 id:145, lbl:, enab:True
 id:155, lbl:, enab:True
+id:157, lbl:, enab:True
+id:163, lbl:, enab:True
+id:167, lbl:, enab:True
 
 Connections:
 src:154, dst:155, type:Regular, mul:1
@@ -135,3 +187,17 @@ src:144, dst:145, type:Inhibitor, mul:1
 src:148, dst:149, type:Inhibitor, mul:1
 src:148, dst:147, type:Inhibitor, mul:1
 src:142, dst:149, type:Regular, mul:1
+src:156, dst:157, type:Regular, mul:1
+src:158, dst:157, type:Regular, mul:1
+src:150, dst:157, type:Regular, mul:1
+src:157, dst:150, type:Regular, mul:1
+src:161, dst:147, type:Regular, mul:1
+src:161, dst:145, type:Regular, mul:1
+src:161, dst:149, type:Regular, mul:1
+src:161, dst:143, type:Regular, mul:1
+src:163, dst:161, type:Regular, mul:100
+src:165, dst:163, type:Regular, mul:1
+src:167, dst:156, type:Regular, mul:30
+src:168, dst:167, type:Regular, mul:1
+src:156, dst:167, type:Inhibitor, mul:1
+src:161, dst:163, type:Inhibitor, mul:1
