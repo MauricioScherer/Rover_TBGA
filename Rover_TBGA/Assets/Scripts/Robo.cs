@@ -12,6 +12,7 @@ public class Robo : MonoBehaviour
     private float count;
     private bool isMoving = true;
     private Vector3 target;
+    private GameObject _currentPlayer;
 
     //status Rover
     private Place _life;
@@ -27,6 +28,8 @@ public class Robo : MonoBehaviour
     public GameObject Shoot;
     public Transform spawnShoot;
 
+    public GameObject areaView;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,30 +41,11 @@ public class Robo : MonoBehaviour
         //update values for status
         _life.AddCallback(RefreshTextos, "refreshLife", Tokens.InOrOut);
 
+        _currentPlayer = GameObject.FindGameObjectWithTag("Player");
+
         RefreshTextos();
 
         RandomDirection();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if(isMoving)
-        //{
-        //    transform.Translate(target * speed * Time.deltaTime);
-
-        //    count++;
-        //    if(count >= timeIsMoving)
-        //    {
-        //        count = 0;
-        //        isMoving = false;
-        //        RandomDirection();
-        //    }
-        //}
-        //else
-        //{
-        //    //atirando
-        //}
     }
 
     public void RefreshTextos()
@@ -71,7 +55,10 @@ public class Robo : MonoBehaviour
         lifeBar.fillAmount = value;
 
         if (value <= 0)
-            Destroy(gameObject);
+        {
+            _currentPlayer.GetComponent<Rover>().SetCanSHoot(false);
+            Destroy(gameObject, 0.1f);
+        }
     }
 
     public void RandomDirection()
@@ -135,6 +122,7 @@ public class Robo : MonoBehaviour
     public void DetectPlayer()
     {
         _robot.GetPlaceByLabel("#Proximity").Tokens = 1;
+        areaView.SetActive(false);
         isMoving = false;
     }
 
