@@ -10,7 +10,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
         Vector3 screenPos = cam.WorldToScreenPoint(transform.position);
 
         if(screenPos.y > Screen.height || screenPos.y < 0)

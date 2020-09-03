@@ -10,5 +10,6 @@ public class CameraTarget : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetMove.position, speedMove * Time.deltaTime);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, targetMove.rotation, speedMove * Time.deltaTime);
     }
 }
