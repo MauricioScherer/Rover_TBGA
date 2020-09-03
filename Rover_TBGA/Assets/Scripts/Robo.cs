@@ -18,7 +18,6 @@ public class Robo : MonoBehaviour
     private Place _life;
 
     [Header("Status")]
-    public GameObject robotPng;
     public Image lifeBar;
     public float speed;
     public float timeSleepMin;
@@ -27,8 +26,6 @@ public class Robo : MonoBehaviour
     [Header("Shoot")]
     public GameObject Shoot;
     public Transform spawnShoot;
-
-    public GameObject areaView;
 
     // Start is called before the first frame update
     void Start()
@@ -72,25 +69,21 @@ public class Robo : MonoBehaviour
                 case 1:
                     _robot.GetPlaceByLabel("#Up").Tokens = 1;
                     //target = Vector3.up;
-                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
                     transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
                     break;
                 case 2:
                     _robot.GetPlaceByLabel("#Down").Tokens = 1;
                     //target = Vector3.down;
-                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
                     transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.0f);
                     break;
                 case 3:
                     _robot.GetPlaceByLabel("#Right").Tokens = 1;
                     //target = Vector3.right;
-                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
                     transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z);
                     break;
                 case 4:
                     _robot.GetPlaceByLabel("#Left").Tokens = 1;
                     //target = Vector3.left;
-                    robotPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
                     transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z);
                     break;
             }
@@ -122,7 +115,6 @@ public class Robo : MonoBehaviour
     public void DetectPlayer()
     {
         _robot.GetPlaceByLabel("#Proximity").Tokens = 1;
-        areaView.SetActive(false);
         isMoving = false;
     }
 

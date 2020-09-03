@@ -15,24 +15,29 @@ public class Rover : MonoBehaviour
     private Place _ammo;
     private Place _life;
 
+    private float _countFuel;
+
     private bool _canShoot;
 
+    [Header("Physics")]
+    public Transform centerOfMass;
+    public float motorTorque;
+    public float maxSteer;
+    public float Steer { get; set; }
+    public float Throttle { get; set; }
+
+    private Rigidbody _rigidbody;
+    private Wheel[] _wheels;
+
     [Header("Status")]
-    public GameObject roverPng;
     public Text fuel;
     public Text ammo;
     public Text life;
 
     [Header("Pool Shoot")]
+    public GameObject mira;
     public PoolShoot pool;
     public Transform spawnShoot;
-
-    [Header("UI Rover")]
-    public GameObject[] btnsMove;
-    public GameObject btnShoot;
-    public GameObject btnShield;
-    public GameObject btnRotRight;
-    public GameObject btnRotLeft;
 
     [Header("Camera")]
     public Transform targetCamera;
@@ -41,6 +46,11 @@ public class Rover : MonoBehaviour
 
     void Start()
     {
+        _wheels = GetComponentsInChildren<Wheel>();
+
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.centerOfMass = centerOfMass.localPosition;
+
         _rover = new PetriNet("Assets/RedesPetri/Rover.pflow");
 
         //Define status conform PetriNet
@@ -56,12 +66,40 @@ public class Rover : MonoBehaviour
         RefreshTextos();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(_canShoot && btnsMove[0].activeSelf)
+        if(Input.GetMouseButtonDown(1))
         {
-            for (int i = 0; i < btnsMove.Length; i++)
-                btnsMove[i].SetActive(false);
+            mira.SetActive(!mira.activeSelf);
+        }
+
+        if(mira.activeSelf)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
+        }
+
+        Steer = GameManager.Instance.InputController.SteerInput;
+
+        Throttle = Input.GetAxis("Vertical");
+
+        if(Input.GetAxis("Vertical") != 0)
+        {
+            _countFuel += Time.deltaTime;
+        }
+
+        if(_countFuel >= 1)
+        {
+            _rover.GetPlaceByLabel("#Move").Tokens = 1;
+            _countFuel = 0;
+        }
+
+        foreach (var wheel in _wheels)
+        {
+            wheel.SteerAngle = Steer * maxSteer;
+            wheel.Torque = Throttle * motorTorque;
         }
     }
 
@@ -71,47 +109,6 @@ public class Rover : MonoBehaviour
         fuel.text = "Combustivel: " + _fuel.Tokens.ToString();
         ammo.text = "Munição: " + _ammo.Tokens.ToString();
     }
-
-    #region MOVE
-    public void Move(GameObject p_btn)
-    {
-        if(!_canShoot)
-        {
-            _rover.GetPlaceByLabel("#Move").Tokens = 1;
-
-            ResetBtns();
-
-            if (p_btn.name == "Up")
-            {
-                roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
-            }
-            else if (p_btn.name == "Down")
-            {
-                roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 180.0f);
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.0f);
-            }
-            else if (p_btn.name == "Right")
-            {
-                roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, -90.0f);
-                transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z);
-            }
-            else if (p_btn.name == "Left")
-            {
-                roverPng.transform.eulerAngles = new Vector3(90.0f, 0.0f, 90.0f);
-                transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z);
-            }
-
-            Invoke("ResetBtns", 0.5f);
-        }
-    }
-
-    private void ResetBtns()
-    {
-        for (int i = 0; i < btnsMove.Length; i++)
-            btnsMove[i].SetActive(!btnsMove[i].activeSelf);
-    }
-    #endregion
 
     public void Shoot()
     {
@@ -138,58 +135,18 @@ public class Rover : MonoBehaviour
         Debug.Log("Ativar escudos");
     }
 
-    public void RotationRight()
+    public void RechargeAmmo()
     {
-        var rot = roverPng.transform.rotation;
-        rot.z += 10.0f;
-        roverPng.transform.rotation = rot;
+        _rover.GetPlaceByLabel("#RechargeAmmo").Tokens = 1;
     }
 
-    public void RotationLeft()
+    public void RechargeFuel()
     {
-        var rot = roverPng.transform.rotation;
-        rot.z -= 10.0f;
-        roverPng.transform.rotation = rot;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Ammo"))
-        {
-            _rover.GetPlaceByLabel("#RechargeAmmo").Tokens = 1;
-            Debug.Log("Recarregou Municao");
-        }
-        else if(other.CompareTag("Fuel"))
-        {
-            _rover.GetPlaceByLabel("#RechargeFuel").Tokens = 1;
-            Debug.Log("Recarregou Gasolina");
-        }
-        //else if (other.CompareTag("Parede"))
-        //{
-        //    _rover.GetPlaceByLabel("#Collision").Tokens = 1;
-        //    Debug.Log("Colidiu");
-        //}
+        _rover.GetPlaceByLabel("#RechargeFuel").Tokens = 1;
     }
 
     public void SetCanSHoot(bool p_status)
     {
         _canShoot = p_status;
-
-        if(p_status)//esta dentro da visão do robô
-        {
-            targetCamera.localPosition = posCameraCombat;
-        }
-        else
-        {
-            targetCamera.localPosition = posCameraMove;
-        }
-
-        for (int i = 0; i < btnsMove.Length; i++)
-            btnsMove[i].SetActive(!_canShoot);
-
-        btnShoot.SetActive(_canShoot);
-        btnShield.SetActive(_canShoot);
-        btnRotRight.SetActive(_canShoot);
-        btnRotLeft.SetActive(_canShoot);
     }
 }
