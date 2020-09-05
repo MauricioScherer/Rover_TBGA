@@ -38,6 +38,13 @@ public class Rover : MonoBehaviour
     public GameObject mira;
     public PoolShoot pool;
     public Transform spawnShoot;
+    public float timeReload;
+    public Image reloadCanShoot;
+    public Text ammoMensage;
+
+    [Header("Shield")]
+    public GameObject shield;
+    public float timeShield;
 
     [Header("Camera")]
     public Transform targetCamera;
@@ -64,6 +71,8 @@ public class Rover : MonoBehaviour
         _life.AddCallback(RefreshTextos, "refreshLife", Tokens.InOrOut);
 
         RefreshTextos();
+
+        ammoMensage.text = "Arma desativada";
     }
 
     private void Update()
@@ -71,29 +80,72 @@ public class Rover : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             mira.SetActive(!mira.activeSelf);
+            reloadCanShoot.enabled = mira.activeSelf;
+
+            if (!mira.activeSelf)
+            {
+                reloadCanShoot.fillAmount = 0;
+                ammoMensage.text = "Arma desativada";
+            }
+            else
+            {
+                reloadCanShoot.color = Color.yellow;
+                ammoMensage.text = "Carregando arma";
+            }
         }
 
         if(mira.activeSelf)
         {
-            if(Input.GetMouseButtonDown(0))
+            if(reloadCanShoot.fillAmount < 1)
+                reloadCanShoot.fillAmount += timeReload * Time.deltaTime;
+            else
+            {
+                ammoMensage.text = "Arma carregada";
+                reloadCanShoot.color = Color.green;
+            }
+
+            if (Input.GetMouseButtonDown(0) && reloadCanShoot.fillAmount == 1)
             {
                 Shoot();
+                reloadCanShoot.fillAmount = 0;
+            }
+        }
+
+        if(Input.GetKeyDown("e") && _rover.GetPlaceByLabel("TimerShield").Tokens == 0)
+        {
+            if(_rover.GetPlaceByLabel("Fuel").Tokens > 5)
+            {
+                _rover.GetPlaceByLabel("#Shield").Tokens = 1;
+                shield.SetActive(true);
+                Invoke("DeactiveShield", timeShield);
+            }
+            else
+            {
+                Debug.Log("Sem combustivel para ativar o escudo");
             }
         }
 
         Steer = GameManager.Instance.InputController.SteerInput;
 
-        Throttle = Input.GetAxis("Vertical");
-
-        if(Input.GetAxis("Vertical") != 0)
+        if(_rover.GetPlaceByLabel("Fuel").Tokens > 0)
         {
-            _countFuel += Time.deltaTime;
+            Throttle = Input.GetAxis("Vertical");
+
+            if (Input.GetAxis("Vertical") != 0)
+            {
+                _countFuel += Time.deltaTime;
+            }
+
+            if (_countFuel >= 1)
+            {
+                _rover.GetPlaceByLabel("#Move").Tokens = 1;
+                _countFuel = 0;
+            }
         }
-
-        if(_countFuel >= 1)
+        else
         {
-            _rover.GetPlaceByLabel("#Move").Tokens = 1;
-            _countFuel = 0;
+            Throttle = 0;
+            Debug.Log("Sem combustivel");
         }
 
         foreach (var wheel in _wheels)
@@ -105,9 +157,9 @@ public class Rover : MonoBehaviour
 
     public void RefreshTextos()
     {
-        life.text = "Vida: " + _life.Tokens.ToString();
-        fuel.text = "Combustivel: " + _fuel.Tokens.ToString();
-        ammo.text = "Munição: " + _ammo.Tokens.ToString();
+        life.text = _life.Tokens.ToString();
+        fuel.text = _fuel.Tokens.ToString();
+        ammo.text = _ammo.Tokens.ToString();
     }
 
     public void Shoot()
@@ -122,6 +174,7 @@ public class Rover : MonoBehaviour
                 _shoot.transform.position = spawnShoot.transform.position;
                 _shoot.transform.rotation = spawnShoot.transform.rotation;
                 _shoot.SetActive(true);
+                _shoot.GetComponent<Shoot>().StartBullet();
             }
         }
         else
@@ -130,9 +183,11 @@ public class Rover : MonoBehaviour
         }
     }
 
-    public void Shield()
+    public void DeactiveShield()
     {
-        Debug.Log("Ativar escudos");
+        _rover.GetPlaceByLabel("#OffShield").Tokens = 1;
+        shield.SetActive(false);
+        Debug.Log("Escudos desativados");
     }
 
     public void RechargeAmmo()
@@ -148,5 +203,10 @@ public class Rover : MonoBehaviour
     public void SetCanSHoot(bool p_status)
     {
         _canShoot = p_status;
+    }
+
+    public void SetDamage()
+    {
+        _rover.GetPlaceByLabel("#Damage").Tokens = 1;
     }
 }

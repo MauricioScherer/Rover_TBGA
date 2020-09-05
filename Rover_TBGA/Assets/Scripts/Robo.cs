@@ -1,6 +1,7 @@
 ﻿using RdPengine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
@@ -13,9 +14,11 @@ public class Robo : MonoBehaviour
     private bool isMoving = true;
     private Vector3 target;
     private GameObject _currentPlayer;
+    private bool pauseShoot;
 
     //status Rover
     private Place _life;
+    private Place _ammo;
 
     [Header("Status")]
     public Image lifeBar;
@@ -23,9 +26,16 @@ public class Robo : MonoBehaviour
     public float timeSleepMin;
     public float timeSleepMax;
 
+    public Text ammoText;
+
     [Header("Shoot")]
+    private float _reloadShoot;
     public GameObject Shoot;
     public Transform spawnShoot;
+    public Image reloadBar;
+    public float timeReload;
+    public float timeFullReload;
+    public GameObject reloadText;
 
     // Start is called before the first frame update
     void Start()
@@ -38,15 +48,21 @@ public class Robo : MonoBehaviour
         //update values for status
         _life.AddCallback(RefreshTextos, "refreshLife", Tokens.InOrOut);
 
+        //Define status conform PetriNet
+        _ammo = _robot.GetPlaceByLabel("Ammo");
+        //update values for status
+        _ammo.AddCallback(RefreshTextos, "refreshAmmo", Tokens.InOrOut);
+
         _currentPlayer = GameObject.FindGameObjectWithTag("Player");
 
         RefreshTextos();
 
-        RandomDirection();
+        //RandomDirection();
     }
 
     public void RefreshTextos()
     {
+        ammoText.text = "Munição " + _ammo.Tokens.ToString();
         float value = _life.Tokens;
         value = value / 3;
         lifeBar.fillAmount = value;
@@ -93,23 +109,60 @@ public class Robo : MonoBehaviour
             float time = Random.Range(time0, time1);
             Invoke("RandomDirection", time);
         }
-        else
-        {
-            //aqui é atirando no player
-        }
 
         //timeIsMoving = Random.Range(30, 120);
 
         //isMoving = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if(other.CompareTag("Shoot"))
+        if(!isMoving)
         {
-            _robot.GetPlaceByLabel("#Damage").Tokens = 1;
-            other.gameObject.SetActive(false);
+            if(_ammo.Tokens > 0)
+            {
+                if(!pauseShoot)
+                {
+                    if (reloadBar.color != Color.yellow)
+                    {
+                        reloadBar.color = Color.yellow;
+                        reloadText.SetActive(false);
+                    }
+
+                    _reloadShoot += Time.deltaTime;
+                    reloadBar.fillAmount = _reloadShoot / timeReload;
+
+                    if (_reloadShoot >= timeReload)
+                    {
+                        _robot.GetPlaceByLabel("#shoot").Tokens = 1;
+                        Instantiate(Shoot, spawnShoot.position, spawnShoot.rotation);
+                        _reloadShoot = 0;
+                    }
+                }
+            }
+            else
+            {
+                if(reloadBar.color != Color.red)
+                {
+                    reloadBar.color = Color.red;
+                    reloadText.SetActive(true);
+                }
+
+                _reloadShoot += Time.deltaTime;
+                reloadBar.fillAmount = _reloadShoot / timeFullReload;
+
+                if(_reloadShoot >= timeFullReload)
+                {
+                    _robot.GetPlaceByLabel("#reloadAmmo").Tokens = 1;
+                    _reloadShoot = 0;
+                }
+            }
         }
+    }
+
+    public void SetDamage()
+    {
+        _robot.GetPlaceByLabel("#Damage").Tokens = 1;
     }
 
     public void DetectPlayer()
@@ -118,9 +171,25 @@ public class Robo : MonoBehaviour
         isMoving = false;
     }
 
+    public bool GetProximity()
+    {
+        return _robot.GetPlaceByLabel("#Proximity").Tokens == 1 ? true : false;
+    }
+
     public void ExitDecetPlayer()
     {
         _robot.GetPlaceByLabel("#Reset").Tokens = 1;
         isMoving = true;
+        pauseShoot = false;
+    }
+
+    public bool GetPauseShoot()
+    {
+        return pauseShoot;
+    }
+
+    public void SetPauseShoot(bool p_status)
+    {
+        pauseShoot = p_status;
     }
 }
