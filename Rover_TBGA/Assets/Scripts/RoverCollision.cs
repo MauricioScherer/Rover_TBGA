@@ -19,4 +19,9 @@ public class RoverCollision : MonoBehaviour
             other.GetComponent<Item>().GetItem();
         }
     }
+
+    public void Damage()
+    {
+        rover.SetDamage();
+    }
 }

@@ -7,28 +7,42 @@ public class Item : MonoBehaviour
 {
     private bool _timer;
     private float _count;
+    private int _countSeg;
 
     public GameObject itemIdle;
     public GameObject itemGet;
-    public Image time;
+    public TextMesh counter;
+    public int counterMax;
+
+    private void Start()
+    {
+        _countSeg = counterMax;
+        counter.text = "";
+    }
 
 
     private void Update()
     {
         if(_timer)
         {
-            _count += 0.025f * Time.deltaTime;
+            _count += Time.deltaTime;
 
-            time.fillAmount = _count;
+            if(_count >= 1)
+            {
+                _countSeg--;
+                _count = 0;
+                counter.text = _countSeg.ToString();
+            }
 
-            if (_count >= 1)
+            if (_countSeg <= 0)
             {
                 GetComponent<BoxCollider>().enabled = true;
                 itemIdle.SetActive(true);
                 itemGet.SetActive(false);
                 _timer = false;
                 _count = 0;
-                time.fillAmount = _count;
+                _countSeg = counterMax;
+                counter.text = "";
             }
         }
     }
@@ -39,5 +53,6 @@ public class Item : MonoBehaviour
         itemIdle.SetActive(false);
         itemGet.SetActive(true);
         _timer = true;
+        counter.text = counterMax.ToString();
     }
 }
