@@ -23,7 +23,7 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if(_timer)
+        if(_timer && gameObject.tag != "Soldier")
         {
             _count += Time.deltaTime;
 

@@ -18,6 +18,17 @@ public class RoverCollision : MonoBehaviour
             rover.RechargeFuel();
             other.GetComponent<Item>().GetItem();
         }
+        else if (other.CompareTag("Soldier"))
+        {
+            rover.RescueSoldier();
+            other.GetComponent<Item>().GetItem();
+        }
+        else if (other.CompareTag("Portal"))
+        {
+            if (rover.GetSoldiersInRover() > 0) rover.PortalActive();
+            Debug.Log("Entrou!");
+        }
+
     }
 
     public void Damage()
