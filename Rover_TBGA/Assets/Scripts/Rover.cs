@@ -14,8 +14,10 @@ public class Rover : MonoBehaviour
     private Place _fuel;
     private Place _ammo;
     private Place _life;
+    private Place _sdRescue;
 
     private float _countFuel;
+    private int _capacity;
 
     private bool _canShoot;
 
@@ -33,6 +35,7 @@ public class Rover : MonoBehaviour
     public Text fuel;
     public Text ammo;
     public Text life;
+    public Text soldier;
 
     [Header("Pool Shoot")]
     public GameObject mira;
@@ -64,12 +67,14 @@ public class Rover : MonoBehaviour
         _fuel = _rover.GetPlaceByLabel("Fuel");
         _ammo = _rover.GetPlaceByLabel("Ammo");
         _life = _rover.GetPlaceByLabel("Life");
+        _sdRescue = _rover.GetPlaceByLabel("SoldierRescue");
 
         //update values for status
         _fuel.AddCallback(RefreshTextos, "refreshFuel", Tokens.InOrOut);
         _ammo.AddCallback(RefreshTextos, "refreshAmmo", Tokens.InOrOut);
         _life.AddCallback(RefreshTextos, "refreshLife", Tokens.InOrOut);
-
+       _sdRescue.AddCallback(RefreshTextos, "refreshSoldier", Tokens.InOrOut); 
+   
         RefreshTextos();
 
         ammoMensage.text = "Arma desativada";
@@ -160,6 +165,9 @@ public class Rover : MonoBehaviour
         life.text = _life.Tokens.ToString();
         fuel.text = _fuel.Tokens.ToString();
         ammo.text = _ammo.Tokens.ToString();
+        soldier.text = _sdRescue.Tokens.ToString() + " / 3"; 
+        //soldier.text = _sdRescue.Tokens.ToString() + " / " + capacity; (ideia de capacidade do Rover)
+
     }
 
     public void Shoot()
@@ -200,6 +208,16 @@ public class Rover : MonoBehaviour
         _rover.GetPlaceByLabel("#RechargeFuel").Tokens = 1;
     }
 
+    public void RescueSoldier()
+    {
+        _rover.GetPlaceByLabel("#Rescue").Tokens = 1;
+    }
+
+    public void PortalActive()
+    {
+        _rover.GetPlaceByLabel("#Portal").Tokens = 1;
+    }
+
     public void SetCanSHoot(bool p_status)
     {
         _canShoot = p_status;
@@ -208,5 +226,10 @@ public class Rover : MonoBehaviour
     public void SetDamage()
     {
         _rover.GetPlaceByLabel("#Damage").Tokens = 1;
+    }
+
+    public int GetSoldiersInRover()
+    {
+        return _sdRescue.Tokens;
     }
 }

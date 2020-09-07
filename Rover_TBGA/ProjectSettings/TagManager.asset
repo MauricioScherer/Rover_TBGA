@@ -13,6 +13,8 @@ TagManager:
   - Robo
   - Shield
   - Rover
+  - Soldier
+  - Portal
   layers:
   - Default
   - TransparentFX
