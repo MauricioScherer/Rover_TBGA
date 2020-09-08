@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
@@ -19,12 +20,18 @@ public class Robo : MonoBehaviour
     //status Rover
     private Place _life;
     private Place _ammo;
+    private Place _fuel;
 
     [Header("Status")]
     public Image lifeBar;
     public float speed;
-    public float timeSleepMin;
-    public float timeSleepMax;
+    private float walkingTime;
+    private float downTime;
+    private float walkingSeg;
+    private bool stopped;
+    private float reloadFuel;
+    public int timeReloadFuel;
+    public Image fuelBar;
 
     public Text ammoText;
 
@@ -53,11 +60,18 @@ public class Robo : MonoBehaviour
         //update values for status
         _ammo.AddCallback(RefreshTextos, "refreshAmmo", Tokens.InOrOut);
 
+        //Define status conform PetriNet
+        _fuel = _robot.GetPlaceByLabel("Fuel");
+        //update values for status
+        _fuel.AddCallback(RefreshTextos, "refreshFuel", Tokens.InOrOut);
+
         _currentPlayer = GameObject.FindGameObjectWithTag("Player");
 
         RefreshTextos();
 
-        //RandomDirection();
+        directionChoice = Random.Range(1, 5);
+
+        RandomDirection();
     }
 
     public void RefreshTextos()
@@ -67,52 +81,47 @@ public class Robo : MonoBehaviour
         value = value / 3;
         lifeBar.fillAmount = value;
 
+        fuelBar.fillAmount = _fuel.Tokens / 100;
+
         if (value <= 0)
         {
             _currentPlayer.GetComponent<Rover>().SetCanSHoot(false);
             Destroy(gameObject, 0.1f);
         }
-    }
+    }    
 
     public void RandomDirection()
     {
-        if(isMoving)
+        int newSort;
+
+        do
+            newSort = Random.Range(1, 5);
+        while (newSort == directionChoice);
+
+        directionChoice = newSort;
+
+        switch (directionChoice)
         {
-            directionChoice = Random.Range(1, 5);
-
-            switch (directionChoice)
-            {
-                case 1:
-                    _robot.GetPlaceByLabel("#Up").Tokens = 1;
-                    //target = Vector3.up;
-                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1.0f);
-                    break;
-                case 2:
-                    _robot.GetPlaceByLabel("#Down").Tokens = 1;
-                    //target = Vector3.down;
-                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1.0f);
-                    break;
-                case 3:
-                    _robot.GetPlaceByLabel("#Right").Tokens = 1;
-                    //target = Vector3.right;
-                    transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z);
-                    break;
-                case 4:
-                    _robot.GetPlaceByLabel("#Left").Tokens = 1;
-                    //target = Vector3.left;
-                    transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z);
-                    break;
-            }
-
-            float time0 = timeSleepMin;
-            float time1 = timeSleepMax;
-            float time = Random.Range(time0, time1);
-            Invoke("RandomDirection", time);
+            case 1:
+                _robot.GetPlaceByLabel("#Up").Tokens = 1;
+                target = Vector3.forward;
+                break;
+            case 2:
+                _robot.GetPlaceByLabel("#Down").Tokens = 1;
+                target = -Vector3.forward;
+                break;
+            case 3:
+                _robot.GetPlaceByLabel("#Right").Tokens = 1;
+                target = Vector3.right;
+                break;
+            case 4:
+                _robot.GetPlaceByLabel("#Left").Tokens = 1;
+                target = Vector3.left;
+                break;
         }
 
-        //timeIsMoving = Random.Range(30, 120);
-
-        //isMoving = true;
+        walkingTime = Random.Range(4, 10);
+        downTime = Random.Range(1, 3);
     }
 
     private void Update()
@@ -158,6 +167,49 @@ public class Robo : MonoBehaviour
                 }
             }
         }
+        else //esta se movendo
+        {
+            if(_fuel.Tokens > 0)
+            {
+                walkingSeg += Time.deltaTime;
+
+                if (!stopped)
+                {
+                    if (walkingSeg < walkingTime)
+                        transform.Translate(target * speed * Time.deltaTime);
+                    else
+                    {
+                        stopped = true;
+                        walkingSeg = 0;
+                    }
+                }
+                else
+                {
+                    if (walkingSeg >= downTime)
+                    {
+                        RandomDirection();
+                        stopped = false;
+                        walkingSeg = 0;
+                    }
+                }
+            }
+            else
+            {
+                reloadFuel += Time.deltaTime;
+
+                if(reloadFuel >= timeReloadFuel)
+                {
+                    reloadFuel = 0;
+                    _robot.GetPlaceByLabel("#ReloadFuel").Tokens = 1;
+                }
+            }
+        }
+    }
+
+    public void DetectColissionCave()
+    {
+        stopped = true;
+        walkingSeg = 0;
     }
 
     public void SetDamage()
