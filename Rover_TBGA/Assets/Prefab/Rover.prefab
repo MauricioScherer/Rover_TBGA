@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180383468254290320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TargetCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 180383468423500787}
   - component: {fileID: 180383468423500781}
   - component: {fileID: 180383468423500780}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerDetect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 180383468628076893}
   - component: {fileID: 180383468628076895}
   - component: {fileID: 180383468628076894}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180383468634968450}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 180383468648773637}
   - component: {fileID: 180383468648773638}
   - component: {fileID: 180383468648773639}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 180383468705884679}
   - component: {fileID: 180383468705884673}
   - component: {fileID: 180383468705884672}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 180383468769757512}
   - component: {fileID: 180383468769757514}
   - component: {fileID: 180383468769757513}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 180383468812440849}
   - component: {fileID: 180383468812440851}
   - component: {fileID: 180383468812440850}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5413,7 +5413,7 @@ GameObject:
   - component: {fileID: 180383468829738541}
   - component: {fileID: 180383468829738540}
   - component: {fileID: 180383468829738547}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shield
   m_TagString: Shield
   m_Icon: {fileID: 0}
@@ -5507,7 +5507,7 @@ GameObject:
   - component: {fileID: 180383469212868969}
   - component: {fileID: 180383469212868968}
   - component: {fileID: 180383469212868970}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rover
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5596,7 +5596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180383469228617527}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5628,7 +5628,7 @@ GameObject:
   - component: {fileID: 180383469271350370}
   - component: {fileID: 180383469271350364}
   - component: {fileID: 180383469271350371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5709,7 +5709,7 @@ GameObject:
   - component: {fileID: 180383469447616725}
   - component: {fileID: 180383469447616727}
   - component: {fileID: 180383469447616726}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5789,7 +5789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180383469507441558}
   - component: {fileID: 180383469507441559}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5880,7 +5880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180383469647323621}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpawnShoot
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -5912,7 +5912,7 @@ GameObject:
   - component: {fileID: 180383469932332850}
   - component: {fileID: 180383469932332844}
   - component: {fileID: 180383469932332851}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5992,7 +5992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180383470001741344}
   - component: {fileID: 180383470001741345}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6143,7 +6143,7 @@ GameObject:
   - component: {fileID: 8184789577620295564}
   - component: {fileID: 8747522255998498707}
   - component: {fileID: 6705919509002164797}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eixo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6225,7 +6225,7 @@ GameObject:
   - component: {fileID: 3835008355196728481}
   - component: {fileID: 1359058555142340715}
   - component: {fileID: 710624252559663551}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6326,7 +6326,7 @@ GameObject:
   - component: {fileID: 8505284238425636246}
   - component: {fileID: 6575792675961867110}
   - component: {fileID: 7807634803735888924}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6407,7 +6407,7 @@ GameObject:
   - component: {fileID: 8786612494140816880}
   - component: {fileID: 690399250741323066}
   - component: {fileID: 1596465533358271247}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Galao1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6486,7 +6486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9001976818223741617}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TargetCameraRadar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6518,7 +6518,7 @@ GameObject:
   - component: {fileID: 2954290185911362829}
   - component: {fileID: 1887396286241071797}
   - component: {fileID: 1887396286241071796}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6596,7 +6596,7 @@ GameObject:
   - component: {fileID: 8666819943164837907}
   - component: {fileID: 2187490426034523320}
   - component: {fileID: 2187490426034523327}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6674,7 +6674,7 @@ GameObject:
   - component: {fileID: 5023424796373074036}
   - component: {fileID: 2234423324818034927}
   - component: {fileID: 2234423324818034926}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6752,7 +6752,7 @@ GameObject:
   - component: {fileID: 3671168291112040133}
   - component: {fileID: 178632251160269090}
   - component: {fileID: 554729931512818326}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Antena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6832,7 +6832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594263551112221110}
   - component: {fileID: 817411075487590462}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: RadarPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6915,7 +6915,7 @@ GameObject:
   - component: {fileID: 7128185043018326261}
   - component: {fileID: 5036476472852486264}
   - component: {fileID: 5036476472852486271}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6993,7 +6993,7 @@ GameObject:
   - component: {fileID: 5393715900542144410}
   - component: {fileID: 5889943429629781885}
   - component: {fileID: 5889943429629781884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7071,7 +7071,7 @@ GameObject:
   - component: {fileID: 5846709293308095486}
   - component: {fileID: 6188274472433654170}
   - component: {fileID: 6188274472433654169}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7149,7 +7149,7 @@ GameObject:
   - component: {fileID: 5200273977703995796}
   - component: {fileID: 4651761430502385644}
   - component: {fileID: 9019416260816048956}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Escapamento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7230,7 +7230,7 @@ GameObject:
   - component: {fileID: 4554481351144888270}
   - component: {fileID: 2381007234897367089}
   - component: {fileID: 7459118138469608660}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Galao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7311,7 +7311,7 @@ GameObject:
   - component: {fileID: 5930108320491307813}
   - component: {fileID: 881568267299974403}
   - component: {fileID: 7535038209122519801}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eixo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

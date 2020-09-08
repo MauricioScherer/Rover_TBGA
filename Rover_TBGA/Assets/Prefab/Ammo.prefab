@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5805250396985674458}
   - component: {fileID: 5805250396985674459}
   - component: {fileID: 5805250396985674457}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ammo
   m_TagString: Ammo
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5805250397241581913}
   - component: {fileID: 5805250397241581911}
   - component: {fileID: 5805250397241581910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 5805250397385993415}
   - component: {fileID: 5805250397385993413}
   - component: {fileID: 5805250397385993412}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9773,7 +9773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5805250397463371099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GetAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9806,7 +9806,7 @@ GameObject:
   - component: {fileID: 5805250397632767987}
   - component: {fileID: 5805250397632767985}
   - component: {fileID: 5805250397632767984}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9901,7 +9901,7 @@ GameObject:
   - component: {fileID: 5805250397909695892}
   - component: {fileID: 5805250397909695890}
   - component: {fileID: 5805250397909695893}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14773,7 +14773,7 @@ GameObject:
   - component: {fileID: 5805250398085333263}
   - component: {fileID: 5805250398085333258}
   - component: {fileID: 5805250398085333261}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14852,7 +14852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5805250398103564392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ParticleAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14887,7 +14887,7 @@ GameObject:
   - component: {fileID: 5805250398501229854}
   - component: {fileID: 5805250398501229852}
   - component: {fileID: 5805250398501229855}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
