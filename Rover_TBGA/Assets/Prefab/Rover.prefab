@@ -5559,6 +5559,7 @@ MonoBehaviour:
   fuel: {fileID: 0}
   ammo: {fileID: 0}
   life: {fileID: 0}
+  soldier: {fileID: 0}
   mira: {fileID: 180383468648773636}
   pool: {fileID: 0}
   spawnShoot: {fileID: 180383469647323621}
@@ -6086,7 +6087,7 @@ GameObject:
   - component: {fileID: 180383470076240782}
   m_Layer: 0
   m_Name: TriggerRover
-  m_TagString: Untagged
+  m_TagString: Rover
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

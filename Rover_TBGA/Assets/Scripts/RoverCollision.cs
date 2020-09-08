@@ -21,7 +21,11 @@ public class RoverCollision : MonoBehaviour
         else if (other.CompareTag("Soldier"))
         {
             rover.RescueSoldier();
-            other.GetComponent<Item>().GetItem();
+            //other.GetComponent<Item>().GetItem();
+
+            other.GetComponent<Soldier>().GetSoldier();
+            GameManager.Instance.CanvasManager.SetMensage("Você resgatou um soldado");
+
         }
         else if (other.CompareTag("Portal"))
         {

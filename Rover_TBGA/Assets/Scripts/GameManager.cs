@@ -8,11 +8,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public InputController InputController { get; private set; }
+    public CanvasManager CanvasManager { get; private set; }
 
     private void Awake()
     {
         Instance = this;
         InputController = GetComponentInChildren<InputController>();
+        CanvasManager = GetComponentInChildren<CanvasManager>();
+
         Time.timeScale = 1;
 
         Cursor.lockState = CursorLockMode.Locked;

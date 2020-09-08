@@ -142,7 +142,7 @@ public class Robo : MonoBehaviour
             }
             else
             {
-                if(reloadBar.color != Color.red)
+                if (reloadBar.color != Color.red)
                 {
                     reloadBar.color = Color.red;
                     reloadText.SetActive(true);
