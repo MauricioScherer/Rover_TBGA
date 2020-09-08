@@ -81,7 +81,8 @@ public class Robo : MonoBehaviour
         value = value / 3;
         lifeBar.fillAmount = value;
 
-        fuelBar.fillAmount = _fuel.Tokens / 100;
+        float value2 = _fuel.Tokens;
+        fuelBar.fillAmount = value2 / 100;
 
         if (value <= 0)
         {
