@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class MapGenerator_meu : MonoBehaviour
     public int randomFillPercent;
 
     public GameObject parede;
-    public GameObject chao;
+    public GameObject teto;
 
     int[,] map;
 
@@ -48,7 +49,8 @@ public class MapGenerator_meu : MonoBehaviour
     {
         if(useRandomSeed)
         {
-            seed = Time.deltaTime.ToString();
+            DateTime currentTime = System.DateTime.Now;
+            seed = currentTime.Second.ToString() + Time.deltaTime.ToString();
         }
 
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
@@ -120,7 +122,8 @@ public class MapGenerator_meu : MonoBehaviour
                     Quaternion rot = new Quaternion(0, 0, 0, 1);
                     if (map[x, y] == 1)
                     {
-                        GameObject newBloco = Instantiate(parede, pos, rot);
+                        GameObject newBloco;
+                        newBloco = Instantiate(parede, pos, rot);
                         newBloco.transform.parent = transform;
                     }
                     //else
