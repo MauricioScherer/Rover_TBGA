@@ -6832,7 +6832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594263551112221110}
   - component: {fileID: 817411075487590462}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: RadarPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

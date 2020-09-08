@@ -231,7 +231,7 @@ MonoBehaviour:
   useRandomSeed: 1
   randomFillPercent: 49
   parede: {fileID: 6870157165254337568, guid: c65d624046b976342be61574201be3d9, type: 3}
-  chao: {fileID: 8220438806407132486, guid: 9da8adb2ed2a1de47bc734d078b22cf2, type: 3}
+  teto: {fileID: 4371228156696196036, guid: 941a9786512f0c442a164e26ef5f1a4c, type: 3}
 --- !u!4 &1113154691
 Transform:
   m_ObjectHideFlags: 0
