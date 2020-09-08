@@ -18,15 +18,14 @@ public class GunRobot : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
             {
-                //if(hit.collider.gameObject.tag != "Rover" && !robot.GetPauseShoot() && hit.collider.gameObject.tag != "Shield")
-                //{
-                //    print(hit.collider.gameObject.name);
-                //    robot.SetPauseShoot(true);
-                //}
-                //else if(robot.GetPauseShoot() && hit.collider.gameObject.tag != "Rover" || robot.GetPauseShoot() && hit.collider.gameObject.tag == "Shield")
-                //{
-                //    robot.SetPauseShoot(false);
-                //}
+                if (hit.collider.gameObject.tag != "Rover" && !robot.GetPauseShoot())
+                {
+                    robot.SetPauseShoot(true);
+                }
+                else if (hit.collider.gameObject.tag == "Rover" && robot.GetPauseShoot())
+                {
+                    robot.SetPauseShoot(false);
+                }
             }
         }
     }
