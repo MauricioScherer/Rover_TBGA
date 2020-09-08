@@ -15,6 +15,7 @@ TagManager:
   - Rover
   - Soldier
   - Portal
+  - TriggerRobot
   layers:
   - Default
   - TransparentFX
