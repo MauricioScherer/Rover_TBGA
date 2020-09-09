@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public InputController InputController { get; private set; }
     public CanvasManager CanvasManager { get; private set; }
 
+    public int soldiersInScene = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        soldiersInScene = GameObject.FindGameObjectsWithTag("Soldier").Length;
     }
 
     // Update is called once per frame
