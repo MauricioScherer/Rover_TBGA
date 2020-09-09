@@ -63,6 +63,10 @@ public class Rover : MonoBehaviour
 
         _rover = new PetriNet("Assets/RedesPetri/Rover.pflow");
 
+        // ajustando a multiplicidade do arco posterior ao Place "SoldierRescue" conforme o número de soldados da cena
+        _rover.GetConnection(17, 18).Multiplicity = GameManager.Instance.soldiersInScene; 
+       
+
         //Define status conform PetriNet
         _fuel = _rover.GetPlaceByLabel("Fuel");
         _ammo = _rover.GetPlaceByLabel("Ammo");
@@ -165,8 +169,7 @@ public class Rover : MonoBehaviour
         life.text = _life.Tokens.ToString();
         fuel.text = _fuel.Tokens.ToString();
         ammo.text = _ammo.Tokens.ToString();
-        soldier.text = _sdRescue.Tokens.ToString() + " / 3"; 
-        //soldier.text = _sdRescue.Tokens.ToString() + " / " + capacity; (ideia de capacidade do Rover)
+        soldier.text = _sdRescue.Tokens.ToString() + " / " + GameManager.Instance.soldiersInScene;
 
     }
 

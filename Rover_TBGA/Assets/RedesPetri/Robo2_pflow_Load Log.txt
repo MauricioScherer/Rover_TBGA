@@ -12,9 +12,9 @@ place:	  id:142  x:-77  y:110  label:#Down  tokens:0  isStatic:false
 place:	  id:153  x:164  y:105  label:#Damage  tokens:0  isStatic:false
 place:	  id:148  x:-80  y:-126  label:#Up  tokens:0  isStatic:false
 place:	  id:154  x:-308  y:206  label:#Reset  tokens:0  isStatic:false
-place:	  id:156  x:238  y:-129  label:Ammo  tokens:5  isStatic:false
+place:	  id:156  x:238  y:-129  label:Ammo  tokens:30  isStatic:false
 place:	  id:158  x:167  y:-53  label:#shoot  tokens:0  isStatic:false
-place:	  id:161  x:-328  y:-121  label:Fuel  tokens:5  isStatic:false
+place:	  id:161  x:-328  y:-121  label:Fuel  tokens:100  isStatic:false
 place:	  id:165  x:-416  y:-228  label:#ReloadFuel  tokens:0  isStatic:false
 place:	  id:168  x:387  y:-130  label:#reloadAmmo  tokens:0  isStatic:false
 transition:	  id:149  x:-77  y:56  label:
@@ -78,9 +78,9 @@ id:142, lbl:#Down, toks:0, conc:False
 id:153, lbl:#Damage, toks:0, conc:False
 id:148, lbl:#Up, toks:0, conc:False
 id:154, lbl:#Reset, toks:0, conc:False
-id:156, lbl:Ammo, toks:5, conc:False
+id:156, lbl:Ammo, toks:30, conc:False
 id:158, lbl:#shoot, toks:0, conc:False
-id:161, lbl:Fuel, toks:5, conc:False
+id:161, lbl:Fuel, toks:100, conc:False
 id:165, lbl:#ReloadFuel, toks:0, conc:False
 id:168, lbl:#reloadAmmo, toks:0, conc:False
 
@@ -145,9 +145,9 @@ id:142, lbl:#Down, toks:0, conc:False
 id:153, lbl:#Damage, toks:0, conc:False
 id:148, lbl:#Up, toks:0, conc:False
 id:154, lbl:#Reset, toks:0, conc:False
-id:156, lbl:Ammo, toks:5, conc:False
+id:156, lbl:Ammo, toks:30, conc:False
 id:158, lbl:#shoot, toks:0, conc:False
-id:161, lbl:Fuel, toks:5, conc:True
+id:161, lbl:Fuel, toks:100, conc:True
 id:165, lbl:#ReloadFuel, toks:0, conc:False
 id:168, lbl:#reloadAmmo, toks:0, conc:False
 
