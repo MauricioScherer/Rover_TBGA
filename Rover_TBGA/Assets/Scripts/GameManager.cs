@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public InputController InputController { get; private set; }
     public CanvasManager CanvasManager { get; private set; }
 
-    public int soldiersInScene = 0;
+    private int soldiersInScene = 0;
 
     private void Awake()
     {
@@ -43,5 +43,15 @@ public class GameManager : MonoBehaviour
     public void Reiniciar()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void SetSoldierInScene(int p_value)
+    {
+        soldiersInScene = p_value;
+    }
+
+    public int GetSoldierInScene()
+    {
+        return soldiersInScene;
     }
 }

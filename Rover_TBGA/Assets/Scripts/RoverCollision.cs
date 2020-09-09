@@ -18,7 +18,7 @@ public class RoverCollision : MonoBehaviour
         {
             rover.RechargeFuel();
             other.GetComponent<Item>().GetItem();
-            GameManager.Instance.CanvasManager.SetMensage("Tanque recarregado!");
+            GameManager.Instance.CanvasManager.SetMensage("Rover recarregado!");
         }
         else if (other.CompareTag("Soldier"))
         {
@@ -28,15 +28,16 @@ public class RoverCollision : MonoBehaviour
         }
         else if (other.CompareTag("Portal"))
         {
-            if (rover.GetSoldiersInRover() == GameManager.Instance.soldiersInScene)
+            if (rover.GetSoldiersInRover() == GameManager.Instance.GetSoldierInScene())
             {
                 rover.PortalActive();
                 GameManager.Instance.CanvasManager.SetMensage("REGASTE CONCLUÍDO");
             }
             else
             {
-                int sdFaltantes = GameManager.Instance.soldiersInScene - rover.GetSoldiersInRover();
-                GameManager.Instance.CanvasManager.SetMensage("Faltam " + sdFaltantes + " a serem regatados!");
+                int sdFaltantes = GameManager.Instance.GetSoldierInScene() - rover.GetSoldiersInRover();
+
+                GameManager.Instance.CanvasManager.SetMensage("Faltam " + "<b>" + "<color='red'>" + sdFaltantes + "</color>" +"</b>" + " soldados a serem regatados!");
             }
         }
 
