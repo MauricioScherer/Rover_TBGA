@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 21871350355371739}
   - component: {fileID: 2857890933307888145}
   m_Layer: 0
-  m_Name: ChaoTeste
+  m_Name: PlayerTeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39b3cebabb707ab43b0fbc05bd875251, type: 2}
+  - {fileID: 2100000, guid: 529efd2159c9ded44a9a9a33150b971b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
