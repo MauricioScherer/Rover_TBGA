@@ -7,6 +7,9 @@ public class MapGenerator_meu : MonoBehaviour
 {
     public int width;
     public int height;
+    private int posX, posY;
+    private bool flood;
+    public int numCicle = 0;
 
     public string seed;
     public bool useRandomSeed;
@@ -16,21 +19,14 @@ public class MapGenerator_meu : MonoBehaviour
 
     public GameObject parede;
     public GameObject teto;
-    public GameObject chao;
+    public GameObject player;
+    private List<GameObject> objTemp = new List<GameObject>();
 
     int[,] map;
 
     private void Start()
     {
         GenerateMap();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("t"))
-        {
-            GenerateMap();
-        }
     }
 
     void GenerateMap()
@@ -42,8 +38,32 @@ public class MapGenerator_meu : MonoBehaviour
         {
             SmoothMap();
         }
-        //FillMeu(50, 50);
         DrawMap();
+
+        posX = 0;
+        posY = 0;
+
+        do
+        {
+            if (posX < width - 1)
+            {
+                posX++;
+            }
+            else
+            {
+                posX = 0;
+                if (posY < height - 1)
+                    posY++;
+                else
+                    posY = 0;
+            }
+
+            if (map[posX, posY] == 0)
+            {
+                FillMeu(posX, posY);
+            }
+        }
+        while (!flood);
     }
 
     void RandomFillMap()
@@ -155,48 +175,81 @@ public class MapGenerator_meu : MonoBehaviour
         List<int> ptsy = new List<int>();
         ptsy.Add(p_y);
 
+        bool instancePlayer = false;
+
         while(ptsx.Count > 0)
         {
-            if(map[ptsx[0] - 1, ptsy[0]] == 0)
+            numCicle++;
+            if (map[ptsx[0], ptsy[0]] == 0)
+            {
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                Quaternion rot = new Quaternion(0, 0, 0, 1);
+                GameObject temp = Instantiate(player, pos, rot);
+                objTemp.Add(temp);
+            }
+            if (map[ptsx[0] - 1, ptsy[0]] == 0)
             {
                 ptsx.Add(ptsx[0] - 1);
                 ptsy.Add(ptsy[0]);
-                //SetNewBloco(ptsx[0] - 1, ptsy[0]);
+
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                Quaternion rot = new Quaternion(0, 0, 0, 1);
+                GameObject temp = Instantiate(player, pos, rot);
+                objTemp.Add(temp);
+
                 map[ptsx[0] - 1, ptsy[0]] = 1;
             }
             if (map[ptsx[0], ptsy[0] - 1] == 0)
             {
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0] - 1);
-                //SetNewBloco(ptsx[0], ptsy[0] - 1);
+
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                Quaternion rot = new Quaternion(0, 0, 0, 1);
+                GameObject temp = Instantiate(player, pos, rot);
+                objTemp.Add(temp);
+
                 map[ptsx[0], ptsy[0] - 1] = 1;
             }
             if (map[ptsx[0] + 1, ptsy[0]] == 0)
             {
                 ptsx.Add(ptsx[0] + 1);
                 ptsy.Add(ptsy[0]);
-                //SetNewBloco(ptsx[0] + 1, ptsy[0]);
+
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                Quaternion rot = new Quaternion(0, 0, 0, 1);
+                GameObject temp = Instantiate(player, pos, rot);
+                objTemp.Add(temp);
+
                 map[ptsx[0] + 1, ptsy[0]] = 1;
             }
             if (map[ptsx[0], ptsy[0] + 1] == 0)
             {
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0] + 1);
-                //SetNewBloco(ptsx[0], ptsy[0] + 1);
+
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                Quaternion rot = new Quaternion(0, 0, 0, 1);
+                GameObject temp = Instantiate(player, pos, rot);
+                objTemp.Add(temp);
+
                 map[ptsx[0], ptsy[0] + 1] = 1;
             }
             ptsx.RemoveAt(0);
             ptsy.RemoveAt(0);
         }
-    }
 
-    public void SetNewBloco(int p_x, int p_y)
-    {
-        //Debug.Log("Adiciona bloco");
-        Vector3 pos = new Vector3(-width / 2 + p_x + 0.5f, 0.0f, -height / 2 + p_y + 0.5f);
-        Quaternion rot = new Quaternion(0, 0, 0, 1);
-
-        GameObject newBloco = Instantiate(chao, pos, rot);
-        newBloco.transform.parent = transform;
+        if(numCicle >= 2000)
+        {
+            flood = true;
+        }
+        else
+        {
+            foreach (GameObject p_obj in objTemp)            
+                Destroy(p_obj);
+            
+            objTemp.Clear();
+            numCicle = 0;
+        }
     }
 }

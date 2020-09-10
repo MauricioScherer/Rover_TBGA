@@ -227,12 +227,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 100
   height: 100
+  numCicle: 0
   seed: teste
   useRandomSeed: 0
-  randomFillPercent: 39
+  randomFillPercent: 49
   parede: {fileID: 6870157165254337568, guid: c65d624046b976342be61574201be3d9, type: 3}
   teto: {fileID: 4371228156696196036, guid: 941a9786512f0c442a164e26ef5f1a4c, type: 3}
-  chao: {fileID: 4371228156696196036, guid: b2819eb7ed0e6a740b92de354d24dadc, type: 3}
+  player: {fileID: 4371228156696196036, guid: b2819eb7ed0e6a740b92de354d24dadc, type: 3}
 --- !u!4 &1113154691
 Transform:
   m_ObjectHideFlags: 0
