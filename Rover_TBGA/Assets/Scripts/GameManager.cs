@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     public InputController InputController { get; private set; }
     public CanvasManager CanvasManager { get; private set; }
 
+    [Header("objetos instânciaveis")]
+    public GameObject Rover;
+    public GameObject Robot;
+    public GameObject poolShoot;
+    public GameObject fuel;
+    public GameObject ammo;
+    public GameObject soldier;
+
     private int soldiersInScene = 0;
 
     private void Awake()

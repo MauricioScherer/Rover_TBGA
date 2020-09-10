@@ -16,6 +16,7 @@ TagManager:
   - Soldier
   - Portal
   - TriggerRobot
+  - PoolShoot
   layers:
   - Default
   - TransparentFX

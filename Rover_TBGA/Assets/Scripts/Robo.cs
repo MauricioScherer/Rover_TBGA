@@ -1,10 +1,5 @@
 ﻿using RdPengine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class Robo : MonoBehaviour

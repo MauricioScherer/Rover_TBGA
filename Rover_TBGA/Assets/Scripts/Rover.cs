@@ -1,10 +1,6 @@
 ﻿using RdPengine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Runtime.Remoting.Messaging;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Rover : MonoBehaviour
 {
@@ -31,19 +27,14 @@ public class Rover : MonoBehaviour
     private Rigidbody _rigidbody;
     private Wheel[] _wheels;
 
-    [Header("Status")]
-    public Text fuel;
-    public Text ammo;
-    public Text life;
-    public Text soldier;
-
     [Header("Pool Shoot")]
     public GameObject mira;
-    public PoolShoot pool;
+    public Material[] matLine;
+    private PoolShoot pool;
     public Transform spawnShoot;
     public float timeReload;
-    public Image reloadCanShoot;
-    public Text ammoMensage;
+    private float reloadCanShoot;
+    private string ammoMensage;
 
     [Header("Shield")]
     public GameObject shield;
@@ -66,7 +57,6 @@ public class Rover : MonoBehaviour
         // ajustando a multiplicidade do arco posterior ao Place "SoldierRescue" conforme o número de soldados da cena
         _rover.GetConnection(17, 18).Multiplicity = GameManager.Instance.GetSoldierInScene(); 
        
-
         //Define status conform PetriNet
         _fuel = _rover.GetPlaceByLabel("Fuel");
         _ammo = _rover.GetPlaceByLabel("Ammo");
@@ -81,7 +71,9 @@ public class Rover : MonoBehaviour
    
         RefreshTextos();
 
-        ammoMensage.text = "Arma desativada";
+        GameManager.Instance.CanvasManager.SetAmmoMensage("Arma desativada");
+
+        pool = GameObject.FindGameObjectWithTag("PoolShoot").GetComponent<PoolShoot>();
     }
 
     private void Update()
@@ -89,34 +81,42 @@ public class Rover : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             mira.SetActive(!mira.activeSelf);
-            reloadCanShoot.enabled = mira.activeSelf;
 
             if (!mira.activeSelf)
             {
-                reloadCanShoot.fillAmount = 0;
-                ammoMensage.text = "Arma desativada";
+                reloadCanShoot = 0;
+                GameManager.Instance.CanvasManager.SetReloadAmmo(reloadCanShoot);
+                GameManager.Instance.CanvasManager.SetColorReloadAmmo(Color.yellow);
+                GameManager.Instance.CanvasManager.SetAmmoMensage("Arma desativada");
             }
             else
             {
-                reloadCanShoot.color = Color.yellow;
-                ammoMensage.text = "Carregando arma";
+                mira.GetComponent<LineRenderer>().material = matLine[0];
+                GameManager.Instance.CanvasManager.SetColorReloadAmmo(Color.yellow);
+                GameManager.Instance.CanvasManager.SetAmmoMensage("Carregando arma");
             }
         }
 
         if(mira.activeSelf)
         {
-            if(reloadCanShoot.fillAmount < 1)
-                reloadCanShoot.fillAmount += timeReload * Time.deltaTime;
+            if(reloadCanShoot < 1)
+            {
+                reloadCanShoot += timeReload * Time.deltaTime;
+                GameManager.Instance.CanvasManager.SetReloadAmmo(reloadCanShoot);
+            }
             else
             {
-                ammoMensage.text = "Arma carregada";
-                reloadCanShoot.color = Color.green;
+                mira.GetComponent<LineRenderer>().material = matLine[1];
+                GameManager.Instance.CanvasManager.SetColorReloadAmmo(Color.green);
+                GameManager.Instance.CanvasManager.SetAmmoMensage("Arma carregada");
             }
 
-            if (Input.GetMouseButtonDown(0) && reloadCanShoot.fillAmount == 1)
+            if (Input.GetMouseButtonDown(0) && reloadCanShoot >= 1)
             {
                 Shoot();
-                reloadCanShoot.fillAmount = 0;
+                reloadCanShoot = 0;
+                mira.GetComponent<LineRenderer>().material = matLine[0];
+                GameManager.Instance.CanvasManager.SetReloadAmmo(reloadCanShoot);
             }
         }
 
@@ -166,11 +166,16 @@ public class Rover : MonoBehaviour
 
     public void RefreshTextos()
     {
-        life.text = _life.Tokens.ToString();
-        fuel.text = _fuel.Tokens.ToString();
-        ammo.text = _ammo.Tokens.ToString();
-        soldier.text = _sdRescue.Tokens.ToString() + " / " + GameManager.Instance.GetSoldierInScene();
-
+        GameManager.Instance.CanvasManager.SetLife(_life.Tokens.ToString());
+        GameManager.Instance.CanvasManager.SetFuel(_fuel.Tokens.ToString());
+        GameManager.Instance.CanvasManager.SetAmmo(_ammo.Tokens.ToString());
+        string _qtSoldiers = _sdRescue.Tokens.ToString() + " / " + GameManager.Instance.GetSoldierInScene();
+        GameManager.Instance.CanvasManager.SetSoldier(_qtSoldiers);
+        //OLD
+        //life.text = _life.Tokens.ToString();
+        //fuel.text = _fuel.Tokens.ToString();
+        //ammo.text = _ammo.Tokens.ToString();
+        //soldier.text = _sdRescue.Tokens.ToString() + " / " + GameManager.Instance.GetSoldierInScene();
     }
 
     public void Shoot()
