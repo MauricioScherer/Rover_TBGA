@@ -20,6 +20,8 @@ public class MapGenerator_meu : MonoBehaviour
     public GameObject parede;
     public GameObject teto;
     public GameObject player;
+    public Material testeProgressao;
+    private int counterTeste = 0;
     private List<GameObject> objTemp = new List<GameObject>();
 
     int[,] map;
@@ -27,6 +29,18 @@ public class MapGenerator_meu : MonoBehaviour
     private void Start()
     {
         GenerateMap();
+    }
+
+    private void FixedUpdate()
+    {
+        if(Input.GetKey("t"))
+        {
+            if(counterTeste < numCicle)
+            {
+                objTemp[counterTeste].GetComponent<MeshRenderer>().material = testeProgressao;
+                counterTeste++;
+            }
+        }
     }
 
     void GenerateMap()
