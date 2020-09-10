@@ -8,6 +8,14 @@ public class CanvasManager : MonoBehaviour
     public Text mensage;
     public float timeMensage;
 
+    [Header("Status Rover")]
+    public Text fuel;
+    public Text ammo;
+    public Text life;
+    public Text soldier;
+    public Image reloadAmmo;
+    public Text ammoMensage;
+
     public void SetMensage(string p_mensage)
     {
         mensage.text = p_mensage;
@@ -18,5 +26,34 @@ public class CanvasManager : MonoBehaviour
     public void DesativeMensage()
     {
         mensage.gameObject.SetActive(false);
+    }
+
+    public void SetFuel(string p_value)
+    {
+        fuel.text = p_value;
+    }
+    public void SetAmmo(string p_value)
+    {
+        ammo.text = p_value;
+    }
+    public void SetLife(string p_value)
+    {
+        life.text = p_value;
+    }
+    public void SetSoldier(string p_value)
+    {
+        soldier.text = p_value;
+    }
+    public void SetReloadAmmo(float p_value)
+    {
+        reloadAmmo.fillAmount = p_value;
+    }
+    public void SetColorReloadAmmo(Color p_color)
+    {
+        reloadAmmo.color = p_color;
+    }
+    public void SetAmmoMensage(string p_value)
+    {
+        ammoMensage.text = p_value;
     }
 }
