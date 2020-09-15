@@ -228,8 +228,8 @@ MonoBehaviour:
   width: 100
   height: 100
   numCicle: 0
-  seed: teste
-  useRandomSeed: 0
+  seed: 
+  useRandomSeed: 1
   randomFillPercent: 49
   parede: {fileID: 6870157165254337568, guid: c65d624046b976342be61574201be3d9, type: 3}
   teto: {fileID: 4371228156696196036, guid: 941a9786512f0c442a164e26ef5f1a4c, type: 3}
@@ -437,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075643799}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 92.7, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
