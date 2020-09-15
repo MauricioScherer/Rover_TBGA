@@ -268,4 +268,12 @@ public class MapGenerator_meu : MonoBehaviour
             numCicle = 0;
         }
     }
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(10, 10, 100, 50), "Gerar mapa"))
+        {
+            GenerateMap();
+        }
+    }
 }
