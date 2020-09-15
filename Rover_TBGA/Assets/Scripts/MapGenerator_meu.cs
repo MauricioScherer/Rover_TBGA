@@ -81,10 +81,13 @@ public class MapGenerator_meu : MonoBehaviour
 
     void RandomFillMap()
     {
-        if (useRandomSeed)
+        if(seed != "")
         {
-            DateTime currentTime = System.DateTime.Now;
-            seed = currentTime.Second.ToString() + Time.deltaTime.ToString();
+            if (useRandomSeed)
+            {
+                DateTime currentTime = System.DateTime.Now;
+                seed = currentTime.Second.ToString() + Time.deltaTime.ToString();
+            }
         }
 
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
