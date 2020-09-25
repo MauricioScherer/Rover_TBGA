@@ -1120,10 +1120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rover: {fileID: 180383469212868975, guid: d6148481b1630be4ab1881196817e610, type: 3}
   Robot: {fileID: 724957346455452068, guid: 1ea55698008b68848a43acd3d8c2a6ef, type: 3}
-  poolShoot: {fileID: 1700507935887569238, guid: c7b2e8d7f3e72b54e8c49269d5b29535, type: 3}
   fuel: {fileID: 163825659942331275, guid: 3839f3c6a07670a4181a3303a8498c7c, type: 3}
   ammo: {fileID: 5805250396985674461, guid: 4e5a7b5c24ab3c544a43c9673fdf7f60, type: 3}
   soldier: {fileID: 163825659942331275, guid: c249750a43e60f847b64c3e53fedb806, type: 3}
+  portal: {fileID: 1407061913090005506, guid: d836a2308c756df4f8b0e656a11a90cc, type: 3}
 --- !u!1 &7965135818557881904
 GameObject:
   m_ObjectHideFlags: 0

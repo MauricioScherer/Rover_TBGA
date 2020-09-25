@@ -17,6 +17,8 @@ TagManager:
   - Portal
   - TriggerRobot
   - PoolShoot
+  - TargetCamera
+  - TargetCameraRadar
   layers:
   - Default
   - TransparentFX

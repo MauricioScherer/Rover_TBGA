@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 180383468254290320}
   m_Layer: 2
   m_Name: TargetCamera
-  m_TagString: Untagged
+  m_TagString: TargetCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6484,7 +6484,7 @@ GameObject:
   - component: {fileID: 9001976818223741617}
   m_Layer: 2
   m_Name: TargetCameraRadar
-  m_TagString: Untagged
+  m_TagString: TargetCameraRadar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
