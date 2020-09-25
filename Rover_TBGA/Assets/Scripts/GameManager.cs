@@ -13,10 +13,11 @@ public class GameManager : MonoBehaviour
     [Header("objetos instânciaveis")]
     public GameObject Rover;
     public GameObject Robot;
-    public GameObject poolShoot;
+    //public GameObject poolShoot;
     public GameObject fuel;
     public GameObject ammo;
     public GameObject soldier;
+    public GameObject portal;
 
     private int soldiersInScene = 0;
 
@@ -30,7 +31,10 @@ public class GameManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
 
+    public void StartNumberSoldier()
+    {
         soldiersInScene = GameObject.FindGameObjectsWithTag("Soldier").Length;
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4026895872078883198}
   - component: {fileID: 21871350355371739}
   - component: {fileID: 2857890933307888145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Teto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

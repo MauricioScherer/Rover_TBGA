@@ -19,28 +19,38 @@ public class MapGenerator_meu : MonoBehaviour
     public GameObject parede;
     public GameObject teto;
     public GameObject player;
-    public Material testeProgressao;
-    private int counterTeste = 0;
-    private List<GameObject> objTemp = new List<GameObject>();
+    //private int counterTeste = 0;
+    //private List<GameObject> objTemp = new List<GameObject>();
+
+    [Header("Numero ciclos")]
+    public int cicloRover;
+    public int[] cicloSoldados;
+    public int[] cicloRobot;
+    public int[] cicloFuel;
+    public int[] cicloAmmo;
+    public int cicloPortal;
 
     int[,] map;
+
+    int[,] mapFloodFill;
+    List<Vector3> position = new List<Vector3>();
 
     private void Start()
     {
         GenerateMap();
     }
 
-    private void FixedUpdate()
-    {
-        if(Input.GetKey("t"))
-        {
-            if(counterTeste < numCicle)
-            {
-                objTemp[counterTeste].GetComponent<MeshRenderer>().material = testeProgressao;
-                counterTeste++;
-            }
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (Input.GetKey("t"))
+    //    {
+    //        if (counterTeste < numCicle)
+    //        {
+    //            //objTemp[counterTeste].GetComponent<MeshRenderer>().material = testeProgressao;
+    //            counterTeste++;
+    //        }
+    //    }
+    //}
 
     void GenerateMap()
     {
@@ -186,70 +196,80 @@ public class MapGenerator_meu : MonoBehaviour
 
     public void FillMeu(int p_x, int p_y)
     {
+        mapFloodFill = map;
+
         List<int> ptsx = new List<int>();
         ptsx.Add(p_x);
         List<int> ptsy = new List<int>();
         ptsy.Add(p_y);
 
-        bool instancePlayer = false;
+        //bool instancePlayer = false;
 
         while(ptsx.Count > 0)
         {
             numCicle++;
-            if (map[ptsx[0], ptsy[0]] == 0)
+            if (mapFloodFill[ptsx[0], ptsy[0]] == 0)
             {
                 Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
-                Quaternion rot = new Quaternion(0, 0, 0, 1);
-                GameObject temp = Instantiate(player, pos, rot);
-                objTemp.Add(temp);
+                position.Add(pos);
+                //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                //GameObject temp = Instantiate(player, pos, rot);
+                //objTemp.Add(temp);
+                ptsx.Add(ptsx[0]);
+                ptsy.Add(ptsy[0]);
+                mapFloodFill[ptsx[0], ptsy[0]] = 2;
             }
-            if (map[ptsx[0] - 1, ptsy[0]] == 0)
+            if (mapFloodFill[ptsx[0] - 1, ptsy[0]] == 0)
             {
                 ptsx.Add(ptsx[0] - 1);
                 ptsy.Add(ptsy[0]);
 
-                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
-                Quaternion rot = new Quaternion(0, 0, 0, 1);
-                GameObject temp = Instantiate(player, pos, rot);
-                objTemp.Add(temp);
+                Vector3 pos = new Vector3(-width / 2 + (ptsx[0] - 1) + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                position.Add(pos);
+                //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                //GameObject temp = Instantiate(player, pos, rot);
+                //objTemp.Add(temp);
 
-                map[ptsx[0] - 1, ptsy[0]] = 1;
+                mapFloodFill[ptsx[0] - 1, ptsy[0]] = 2;
             }
-            if (map[ptsx[0], ptsy[0] - 1] == 0)
+            if (mapFloodFill[ptsx[0], ptsy[0] - 1] == 0)
             {
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0] - 1);
 
-                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
-                Quaternion rot = new Quaternion(0, 0, 0, 1);
-                GameObject temp = Instantiate(player, pos, rot);
-                objTemp.Add(temp);
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + (ptsy[0] - 1) + 0.5f);
+                position.Add(pos);
+                //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                //GameObject temp = Instantiate(player, pos, rot);
+                //objTemp.Add(temp);
 
-                map[ptsx[0], ptsy[0] - 1] = 1;
+                mapFloodFill[ptsx[0], ptsy[0] - 1] = 2;
             }
-            if (map[ptsx[0] + 1, ptsy[0]] == 0)
+            if (mapFloodFill[ptsx[0] + 1, ptsy[0]] == 0)
             {
                 ptsx.Add(ptsx[0] + 1);
                 ptsy.Add(ptsy[0]);
 
-                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
-                Quaternion rot = new Quaternion(0, 0, 0, 1);
-                GameObject temp = Instantiate(player, pos, rot);
-                objTemp.Add(temp);
+                Vector3 pos = new Vector3(-width / 2 + (ptsx[0] + 1) + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
+                position.Add(pos);
+                //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                //GameObject temp = Instantiate(player, pos, rot);
+                //objTemp.Add(temp);
 
-                map[ptsx[0] + 1, ptsy[0]] = 1;
+                mapFloodFill[ptsx[0] + 1, ptsy[0]] = 2;
             }
-            if (map[ptsx[0], ptsy[0] + 1] == 0)
+            if (mapFloodFill[ptsx[0], ptsy[0] + 1] == 0)
             {
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0] + 1);
 
-                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
-                Quaternion rot = new Quaternion(0, 0, 0, 1);
-                GameObject temp = Instantiate(player, pos, rot);
-                objTemp.Add(temp);
+                Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + (ptsy[0] + 1) + 0.5f);
+                position.Add(pos);
+                //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                //GameObject temp = Instantiate(player, pos, rot);
+                //objTemp.Add(temp);
 
-                map[ptsx[0], ptsy[0] + 1] = 1;
+                mapFloodFill[ptsx[0], ptsy[0] + 1] = 2;
             }
             ptsx.RemoveAt(0);
             ptsy.RemoveAt(0);
@@ -258,22 +278,69 @@ public class MapGenerator_meu : MonoBehaviour
         if(numCicle >= 2000)
         {
             flood = true;
+            Quaternion rot = new Quaternion(0, 0, 0, 1);
+            cicloPortal = numCicle - 100;
+            Instantiate(GameManager.Instance.portal, position[cicloPortal], rot);
+
+            for (int i = 0; i < position.Count; i++)
+            {
+                if(i == cicloRover)
+                {
+                    //Quaternion rot = new Quaternion(0, 0, 0, 1);
+                    //Instantiate(player, position[i], rot);
+                    GameManager.Instance.Rover.GetComponent<Transform>().position = position[i];
+                    GameManager.Instance.Rover.SetActive(true);
+                }
+                
+                for(int s = 0; s < cicloSoldados.Length; s++)
+                {
+                    if(cicloSoldados[s] == i)
+                    {
+                        Instantiate(GameManager.Instance.soldier, position[i], rot);
+                    }
+                }
+
+                for (int r = 0; r < cicloRobot.Length; r++)
+                {
+                    if (cicloRobot[r] == i)
+                    {
+                        Instantiate(GameManager.Instance.Robot, position[i], rot);
+                    }
+                }
+
+                for (int f = 0; f < cicloFuel.Length; f++)
+                {
+                    if (cicloFuel[f] == i)
+                    {
+                        Instantiate(GameManager.Instance.fuel, position[i], rot);
+                    }
+                }
+
+                for (int a = 0; a < cicloAmmo.Length; a++)
+                {
+                    if (cicloAmmo[a] == i)
+                    {
+                        Instantiate(GameManager.Instance.ammo, position[i], rot);
+                    }
+                }
+
+                GameManager.Instance.StartNumberSoldier();
+            }
         }
         else
         {
-            foreach (GameObject p_obj in objTemp)            
-                Destroy(p_obj);
-            
-            objTemp.Clear();
+            //foreach (GameObject p_obj in objTemp)
+            //    Destroy(p_obj);
+            //objTemp.Clear();
+            mapFloodFill = null;
+            position.Clear();
             numCicle = 0;
         }
-    }
 
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, 10, 100, 50), "Gerar mapa"))
+        if(numCicle >= 10000)
         {
-            GenerateMap();
+            ptsx.Clear();
+            ptsy.Clear();
         }
     }
 }
