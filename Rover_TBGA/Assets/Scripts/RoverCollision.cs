@@ -31,7 +31,9 @@ public class RoverCollision : MonoBehaviour
             if (rover.GetSoldiersInRover() == GameManager.Instance.GetSoldierInScene())
             {
                 rover.PortalActive();
-                GameManager.Instance.CanvasManager.SetMensage("REGASTE CONCLUÍDO");
+                rover.Throttle = 0;
+                GameManager.Instance.CanvasManager.CallMissionPainel(true);
+                GameManager.Instance.CanvasManager.SetMensage("Resgate Concluído");
             }
             else
             {

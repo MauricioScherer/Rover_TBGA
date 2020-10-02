@@ -29,8 +29,14 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if(SceneManager.GetActiveScene().name != "StartMenu")
+        {
+            ActiveMouse(false);
+        }
+        else
+        {
+            ActiveMouse(true);
+        }
     }
 
     public void StartNumberSoldier()
@@ -57,6 +63,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void SetSoldierInScene(int p_value)
     {
         soldiersInScene = p_value;
@@ -65,5 +76,18 @@ public class GameManager : MonoBehaviour
     public int GetSoldierInScene()
     {
         return soldiersInScene;
+    }
+
+    public void ActiveMouse(bool active)
+    {
+        if(active)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        Cursor.visible = active;
     }
 }

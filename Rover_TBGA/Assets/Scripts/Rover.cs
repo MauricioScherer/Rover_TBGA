@@ -1,6 +1,7 @@
 ﻿using RdPengine;
 using System.Runtime.Remoting.Messaging;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rover : MonoBehaviour
 {
@@ -130,7 +131,7 @@ public class Rover : MonoBehaviour
             }
             else
             {
-                Debug.Log("Sem combustivel para ativar o escudo");
+                GameManager.Instance.CanvasManager.SetMensage("Sem combustivel para ativar o escudo");
             }
         }
 
@@ -154,8 +155,13 @@ public class Rover : MonoBehaviour
         else
         {
             Throttle = 0;
-            Debug.Log("Sem combustivel");
+            GameManager.Instance.CanvasManager.SetMensage("Sem combustivel");
         }
+        if (_rover.GetPlaceByLabel("Fuel").Tokens <= 0 || _rover.GetPlaceByLabel("Life").Tokens <= 0)
+        {
+            GameManager.Instance.CanvasManager.CallMissionPainel(false);
+        }
+
 
         foreach (var wheel in _wheels)
         {
@@ -195,7 +201,7 @@ public class Rover : MonoBehaviour
         }
         else
         {
-            Debug.Log("Sem munição");
+            GameManager.Instance.CanvasManager.SetMensage("Sem munição");
         }
     }
 
@@ -203,7 +209,7 @@ public class Rover : MonoBehaviour
     {
         _rover.GetPlaceByLabel("#OffShield").Tokens = 1;
         shield.SetActive(false);
-        Debug.Log("Escudos desativados");
+        GameManager.Instance.CanvasManager.SetMensage("Escudos desativados");
     }
 
     public void RechargeAmmo()
