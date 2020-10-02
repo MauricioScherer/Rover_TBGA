@@ -52,4 +52,9 @@ MonoBehaviour:
   parede: {fileID: 6870157165254337568, guid: c65d624046b976342be61574201be3d9, type: 3}
   teto: {fileID: 4371228156696196036, guid: 941a9786512f0c442a164e26ef5f1a4c, type: 3}
   player: {fileID: 4371228156696196036, guid: b2819eb7ed0e6a740b92de354d24dadc, type: 3}
-  ciclosRover: 10
+  cicloRover: 50
+  cicloSoldados: 9001000084030000b0040000a4060000
+  cicloRobot: fa00000058020000ca0300005b040000c4090000f00a0000
+  cicloFuel: c5010000dc0500008c0b0000
+  cicloAmmo: c4090000
+  cicloPortal: 1

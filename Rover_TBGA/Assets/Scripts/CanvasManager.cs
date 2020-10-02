@@ -16,6 +16,11 @@ public class CanvasManager : MonoBehaviour
     public Image reloadAmmo;
     public Text ammoMensage;
 
+    [Header("Painel")]
+    public GameObject blackScreen;
+    public Image info;
+    public Sprite[] sprite;
+
     public void SetMensage(string p_mensage)
     {
         mensage.text = p_mensage;
@@ -55,5 +60,18 @@ public class CanvasManager : MonoBehaviour
     public void SetAmmoMensage(string p_value)
     {
         ammoMensage.text = p_value;
+    }
+    public void CallMissionPainel(bool win)
+    { 
+        blackScreen.SetActive(true);
+        if(win)
+        {
+            info.sprite = sprite[0];
+        }
+        else
+        {
+            info.sprite = sprite[1];
+        }
+        GameManager.Instance.ActiveMouse(true);
     }
 }
