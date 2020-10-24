@@ -67,11 +67,12 @@ public class CanvasManager : MonoBehaviour
         if(win)
         {
             info.sprite = sprite[0];
+            GameManager.Instance.LoadLevel2();
         }
         else
         {
             info.sprite = sprite[1];
+            GameManager.Instance.ActiveMouse(true);
         }
-        GameManager.Instance.ActiveMouse(true);
     }
 }

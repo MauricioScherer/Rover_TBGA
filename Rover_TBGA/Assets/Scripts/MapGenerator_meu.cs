@@ -22,13 +22,25 @@ public class MapGenerator_meu : MonoBehaviour
     //private int counterTeste = 0;
     //private List<GameObject> objTemp = new List<GameObject>();
 
-    [Header("Numero ciclos")]
-    public int cicloRover;
-    public int[] cicloSoldados;
-    public int[] cicloRobot;
-    public int[] cicloFuel;
-    public int[] cicloAmmo;
-    public int cicloPortal;
+    //qt numero ciclos para instanciar objeto
+    private int cicloRover;
+    private int cicloPortal;
+
+    [SerializeField]
+    private int qtSoldier;
+    private int[] cicloSoldados;
+
+    [SerializeField]
+    private int qtRobot;
+    private int[] cicloRobot;
+
+    [SerializeField]
+    private int qtFuel;
+    private int[] cicloFuel;
+
+    [SerializeField]
+    private int qtAmmo;
+    private int[] cicloAmmo;
 
     int[,] map;
 
@@ -37,6 +49,10 @@ public class MapGenerator_meu : MonoBehaviour
 
     private void Start()
     {
+        cicloSoldados = new int[qtSoldier];
+        cicloRobot = new int[qtRobot];
+        cicloFuel = new int[qtFuel];
+        cicloAmmo = new int[qtAmmo];
         GenerateMap();
     }
 
@@ -203,8 +219,6 @@ public class MapGenerator_meu : MonoBehaviour
         List<int> ptsy = new List<int>();
         ptsy.Add(p_y);
 
-        //bool instancePlayer = false;
-
         while(ptsx.Count > 0)
         {
             numCicle++;
@@ -212,9 +226,6 @@ public class MapGenerator_meu : MonoBehaviour
             {
                 Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
                 position.Add(pos);
-                //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                //GameObject temp = Instantiate(player, pos, rot);
-                //objTemp.Add(temp);
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0]);
                 mapFloodFill[ptsx[0], ptsy[0]] = 2;
@@ -226,9 +237,6 @@ public class MapGenerator_meu : MonoBehaviour
 
                 Vector3 pos = new Vector3(-width / 2 + (ptsx[0] - 1) + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
                 position.Add(pos);
-                //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                //GameObject temp = Instantiate(player, pos, rot);
-                //objTemp.Add(temp);
 
                 mapFloodFill[ptsx[0] - 1, ptsy[0]] = 2;
             }
@@ -239,9 +247,6 @@ public class MapGenerator_meu : MonoBehaviour
 
                 Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + (ptsy[0] - 1) + 0.5f);
                 position.Add(pos);
-                //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                //GameObject temp = Instantiate(player, pos, rot);
-                //objTemp.Add(temp);
 
                 mapFloodFill[ptsx[0], ptsy[0] - 1] = 2;
             }
@@ -252,9 +257,6 @@ public class MapGenerator_meu : MonoBehaviour
 
                 Vector3 pos = new Vector3(-width / 2 + (ptsx[0] + 1) + 0.5f, 0.0f, -height / 2 + ptsy[0] + 0.5f);
                 position.Add(pos);
-                //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                //GameObject temp = Instantiate(player, pos, rot);
-                //objTemp.Add(temp);
 
                 mapFloodFill[ptsx[0] + 1, ptsy[0]] = 2;
             }
@@ -265,9 +267,6 @@ public class MapGenerator_meu : MonoBehaviour
 
                 Vector3 pos = new Vector3(-width / 2 + ptsx[0] + 0.5f, 0.0f, -height / 2 + (ptsy[0] + 1) + 0.5f);
                 position.Add(pos);
-                //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                //GameObject temp = Instantiate(player, pos, rot);
-                //objTemp.Add(temp);
 
                 mapFloodFill[ptsx[0], ptsy[0] + 1] = 2;
             }
@@ -275,6 +274,7 @@ public class MapGenerator_meu : MonoBehaviour
             ptsy.RemoveAt(0);
         }
 
+        //inicia a distribuição dos objetos de cena
         if(numCicle >= 2000)
         {
             flood = true;
@@ -282,14 +282,58 @@ public class MapGenerator_meu : MonoBehaviour
             cicloPortal = numCicle - 100;
             Instantiate(GameManager.Instance.portal, position[cicloPortal], rot);
 
+            //Definição ciclo do Rover
+            cicloRover = numCicle / 2;
+
+            int intervalo;
+
+            //definição ciclo dos soldados
+            intervalo = numCicle / qtSoldier;
+            for (int i = 0; i < cicloSoldados.Length; i++)
+            {
+                int minValue = intervalo * i;
+                int maxValue = i == 0 ? intervalo : minValue * 2;
+                maxValue = maxValue > numCicle ? numCicle : maxValue;
+                cicloSoldados[i] = UnityEngine.Random.Range(minValue, maxValue);
+            }
+
+            //definição ciclo dos robos
+            intervalo = numCicle / qtRobot;
+            for (int i = 0; i < cicloRobot.Length; i++)
+            {
+                int minValue = intervalo * i;
+                int maxValue = i == 0 ? intervalo : minValue * 2;
+                maxValue = maxValue > numCicle ? numCicle : maxValue;
+                cicloRobot[i] = UnityEngine.Random.Range(minValue, maxValue);
+            }
+
+            //definição ciclo combustivel
+            intervalo = numCicle / qtFuel;
+            for (int i = 0; i < cicloFuel.Length; i++)
+            {
+                int minValue = intervalo * i;
+                int maxValue = i == 0 ? intervalo : minValue * 2;
+                maxValue = maxValue > numCicle ? numCicle : maxValue;
+                cicloFuel[i] = UnityEngine.Random.Range(minValue, maxValue);
+            }
+
+            //definição ciclo munição
+            intervalo = numCicle / qtAmmo;
+            for (int i = 0; i < cicloAmmo.Length; i++)
+            {
+                int minValue = intervalo * i;
+                int maxValue = i == 0 ? intervalo : minValue * 2;
+                maxValue = maxValue > numCicle ? numCicle : maxValue;
+                cicloAmmo[i] = UnityEngine.Random.Range(minValue, maxValue);
+            }
+
+
             for (int i = 0; i < position.Count; i++)
             {
                 if(i == cicloRover)
                 {
-                    //Quaternion rot = new Quaternion(0, 0, 0, 1);
-                    //Instantiate(player, position[i], rot);
-                    GameManager.Instance.Rover.GetComponent<Transform>().position = position[i];
-                    GameManager.Instance.Rover.SetActive(true);
+                    GameManager.Instance.roverPlayer.GetComponent<Transform>().position = position[i];
+                    GameManager.Instance.roverPlayer.SetActive(true);
                 }
                 
                 for(int s = 0; s < cicloSoldados.Length; s++)
