@@ -449,19 +449,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
       propertyPath: qtSoldier
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
       propertyPath: qtRobot
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
       propertyPath: qtFuel
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
       propertyPath: qtAmmo
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}

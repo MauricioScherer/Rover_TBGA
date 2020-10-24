@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public CanvasManager CanvasManager { get; private set; }
 
     [Header("objetos instânciaveis")]
-    public GameObject Rover;
+    public GameObject roverPlayer;
     public GameObject Robot;
     //public GameObject poolShoot;
     public GameObject fuel;
@@ -29,14 +29,14 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
 
-        if(SceneManager.GetActiveScene().name != "StartMenu")
-        {
-            ActiveMouse(false);
-        }
-        else
-        {
-            ActiveMouse(true);
-        }
+        //if(SceneManager.GetActiveScene().name != "StartMenu")
+        //{
+        //    ActiveMouse(false);
+        //}
+        //else
+        //{
+        //    ActiveMouse(true);
+        //}
     }
 
     public void StartNumberSoldier()
@@ -66,6 +66,14 @@ public class GameManager : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void LoadLevel2()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+            SceneManager.LoadScene(2);
+        else
+            Reiniciar();
     }
 
     public void SetSoldierInScene(int p_value)
