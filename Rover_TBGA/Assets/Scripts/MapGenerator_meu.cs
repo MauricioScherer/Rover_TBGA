@@ -48,8 +48,8 @@ public class MapGenerator_meu : MonoBehaviour
     List<Vector3> position = new List<Vector3>();
     //List<int> statusPosition = new List<int>();
 
-    //[SerializeField]
-    //private GameObject tile0;
+    [SerializeField]
+    private GameObject tile0;
     //[SerializeField]
     //private GameObject tile1;
 
@@ -302,7 +302,7 @@ public class MapGenerator_meu : MonoBehaviour
         //inicia a distribuição dos objetos de cena
         if(numCicle >= 2000)
         {
-            mapStatus = map;
+            mapStatus = mapFloodFill;
 
             flood = true;
             Quaternion rot = new Quaternion(0, 0, 0, 1);
@@ -364,6 +364,8 @@ public class MapGenerator_meu : MonoBehaviour
                 {
                     GameManager.Instance.roverPlayer.GetComponent<Transform>().position = position[i];
                     GameManager.Instance.roverPlayer.SetActive(true);
+
+                    print("Posição inicial Rover: " + position[i].x + " / " + position[i].z);
                 }
                 
                 for(int s = 0; s < cicloSoldados.Length; s++)
@@ -453,6 +455,7 @@ public class MapGenerator_meu : MonoBehaviour
 
                 if (diferencaX <= 1 && diferencaz <= 1)
                 {
+                    Instantiate(tile0, position[_count], new Quaternion(0, 0, 0, 1));
                     print("Pos X: " + position[_count].x + " / Pos Z: " + position[_count].z);
                     stayLoop = true;
                 }
