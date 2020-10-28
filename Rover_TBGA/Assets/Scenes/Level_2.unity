@@ -463,6 +463,14 @@ PrefabInstance:
       propertyPath: qtAmmo
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
+      propertyPath: tile0
+      value: 
+      objectReference: {fileID: 2691650615292457848, guid: 56effc85cb7890241be786a576983a04, type: 3}
+    - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
+      propertyPath: tile1
+      value: 
+      objectReference: {fileID: 640966406042426054, guid: e6a9e03c2529fb148afb0afcbe72bc38, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
 --- !u!4 &946751052 stripped
@@ -728,6 +736,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7494380746889569576, guid: 3b74ce736f5c80044be4103340766be9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7965135816990070963, guid: 3b74ce736f5c80044be4103340766be9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 129.66
