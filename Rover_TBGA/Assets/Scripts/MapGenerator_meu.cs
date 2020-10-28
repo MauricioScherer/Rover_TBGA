@@ -18,7 +18,6 @@ public class MapGenerator_meu : MonoBehaviour
 
     public GameObject parede;
     public GameObject teto;
-    public GameObject player;
     //private int counterTeste = 0;
     //private List<GameObject> objTemp = new List<GameObject>();
 
@@ -45,15 +44,34 @@ public class MapGenerator_meu : MonoBehaviour
     int[,] map;
 
     int[,] mapFloodFill;
+    int[,] mapStatus;
     List<Vector3> position = new List<Vector3>();
+    //List<int> statusPosition = new List<int>();
+
+    //[SerializeField]
+    //private GameObject tile0;
+    //[SerializeField]
+    //private GameObject tile1;
+
+    private Transform roverPosition;
+    private bool stayLoop;
 
     private void Start()
     {
+        roverPosition = GameManager.Instance.roverPlayer.GetComponent<Transform>();
         cicloSoldados = new int[qtSoldier];
         cicloRobot = new int[qtRobot];
         cicloFuel = new int[qtFuel];
         cicloAmmo = new int[qtAmmo];
         GenerateMap();
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown("t"))
+        {
+            GetPositionRover();
+        }
     }
 
     //private void FixedUpdate()
@@ -228,6 +246,7 @@ public class MapGenerator_meu : MonoBehaviour
                 position.Add(pos);
                 ptsx.Add(ptsx[0]);
                 ptsy.Add(ptsy[0]);
+
                 mapFloodFill[ptsx[0], ptsy[0]] = 2;
             }
             if (mapFloodFill[ptsx[0] - 1, ptsy[0]] == 0)
@@ -274,13 +293,24 @@ public class MapGenerator_meu : MonoBehaviour
             ptsy.RemoveAt(0);
         }
 
+        //numero conforme o que esta na posição
+        // 0 -> chao normal
+        // 1 -> chao alagado
+        // 3 -> soldado
+
+
         //inicia a distribuição dos objetos de cena
         if(numCicle >= 2000)
         {
+            mapStatus = map;
+
             flood = true;
             Quaternion rot = new Quaternion(0, 0, 0, 1);
             cicloPortal = numCicle - 100;
             Instantiate(GameManager.Instance.portal, position[cicloPortal], rot);
+
+            //posição de onde está o portal na grid
+            //statusPosition[cicloPortal] = 3;
 
             //Definição ciclo do Rover
             cicloRover = numCicle / 2;
@@ -341,6 +371,8 @@ public class MapGenerator_meu : MonoBehaviour
                     if(cicloSoldados[s] == i)
                     {
                         Instantiate(GameManager.Instance.soldier, position[i], rot);
+                        //atualiza a lista que nessa posição tem um soldado
+                        //statusPosition[i] = 3;
                     }
                 }
 
@@ -385,6 +417,51 @@ public class MapGenerator_meu : MonoBehaviour
         {
             ptsx.Clear();
             ptsy.Clear();
+        }
+
+
+        //temporario
+        //print(statusPosition.Count);
+        //Quaternion tempRot = new Quaternion(0, 0, 0, 1);
+        //for (int i = 0; i < position.Count; i++)
+        //{
+        //    if(statusPosition[i] == 0)
+        //        Instantiate(tile0, position[i], tempRot);
+        //    if (statusPosition[i] == 1)
+        //        Instantiate(tile1, position[i], tempRot);
+        //}
+    }
+
+    private void GetPositionRover()
+    {
+        stayLoop = false;
+        int _count = 0;
+        
+        float p_x = roverPosition.position.x;
+        float p_z = roverPosition.position.z;
+
+        print("Rover X: " + p_x + " / Rover Z: " + p_z);
+
+        while(!stayLoop)
+        {
+            if(_count < numCicle)
+            {
+                Vector3 p_vector = position[_count];
+
+                float diferencaX = p_vector.x - roverPosition.position.x;
+                float diferencaz = p_vector.z - roverPosition.position.z;
+
+                if (diferencaX <= 1 && diferencaz <= 1)
+                {
+                    print("Pos X: " + position[_count].x + " / Pos Z: " + position[_count].z);
+                    stayLoop = true;
+                }
+                _count++;
+            }
+            else
+            {
+                stayLoop = true;
+            }
         }
     }
 }
