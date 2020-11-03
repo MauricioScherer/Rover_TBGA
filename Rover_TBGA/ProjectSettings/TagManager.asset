@@ -19,6 +19,7 @@ TagManager:
   - PoolShoot
   - TargetCamera
   - TargetCameraRadar
+  - GameOfLife
   layers:
   - Default
   - TransparentFX
