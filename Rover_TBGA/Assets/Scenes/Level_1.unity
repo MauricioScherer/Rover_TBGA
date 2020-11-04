@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 2691650615292457848, guid: 56effc85cb7890241be786a576983a04, type: 3}
     - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
       propertyPath: useRandomSeed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
