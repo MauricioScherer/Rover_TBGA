@@ -46,7 +46,9 @@ public class MapGenerator_meu : MonoBehaviour
     int[,] mapFloodFill;
     int[,] mapStatus;
     List<Vector3> position = new List<Vector3>();
-    //List<int> statusPosition = new List<int>();
+    List<int> statusPosition = new List<int>();
+
+    List<Vector3> soldierCount = new List<Vector3>();
 
     [SerializeField]
     private GameObject tile0;
@@ -296,13 +298,17 @@ public class MapGenerator_meu : MonoBehaviour
         //numero conforme o que esta na posição
         // 0 -> chao normal
         // 1 -> chao alagado
-        // 3 -> soldado
-
+        // 3 -> soldado       
 
         //inicia a distribuição dos objetos de cena
         if(numCicle >= 2000)
         {
-            mapStatus = mapFloodFill;
+            //mapStatus = mapFloodFill;
+
+            for(int i = 0; i < position.Count; i++)
+            {
+                statusPosition.Add(UnityEngine.Random.Range(0, 3));
+            }
 
             flood = true;
             Quaternion rot = new Quaternion(0, 0, 0, 1);
@@ -374,7 +380,8 @@ public class MapGenerator_meu : MonoBehaviour
                     {
                         Instantiate(GameManager.Instance.soldier, position[i], rot);
                         //atualiza a lista que nessa posição tem um soldado
-                        //statusPosition[i] = 3;
+                        statusPosition[i] = 3;
+                        soldierCount.Add(position[i]);
                     }
                 }
 
@@ -444,27 +451,32 @@ public class MapGenerator_meu : MonoBehaviour
 
         print("Rover X: " + p_x + " / Rover Z: " + p_z);
 
-        while(!stayLoop)
+        for(int i = 0; i < soldierCount.Count; i++)
         {
-            if(_count < numCicle)
-            {
-                Vector3 p_vector = position[_count];
-
-                float diferencaX = p_vector.x - roverPosition.position.x;
-                float diferencaz = p_vector.z - roverPosition.position.z;
-
-                if (diferencaX <= 1 && diferencaz <= 1)
-                {
-                    Instantiate(tile0, position[_count], new Quaternion(0, 0, 0, 1));
-                    print("Pos X: " + position[_count].x + " / Pos Z: " + position[_count].z);
-                    stayLoop = true;
-                }
-                _count++;
-            }
-            else
-            {
-                stayLoop = true;
-            }
+            print("Rover Soldado " + i  + " posX: " + soldierCount[i].x + " / Rover Soldado " + i + " posZ: " + soldierCount[i].z);
         }
+
+        //while (!stayLoop)
+        //{
+        //    if(_count < numCicle)
+        //    {
+        //        Vector3 p_vector = position[_count];
+
+        //        float diferencaX = p_vector.x - roverPosition.position.x;
+        //        float diferencaz = p_vector.z - roverPosition.position.z;
+
+        //        if (diferencaX <= 1 && diferencaz <= 1)
+        //        {
+        //            Instantiate(tile0, position[_count], new Quaternion(0, 0, 0, 1));
+        //            print("Pos X: " + position[_count].x + " / Pos Z: " + position[_count].z);
+        //            stayLoop = true;
+        //        }
+        //        _count++;
+        //    }
+        //    else
+        //    {
+        //        stayLoop = true;
+        //    }
+        //}
     }
 }
