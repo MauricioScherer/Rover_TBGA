@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Dijkstra;
 
 public class MapGenerator_meu : MonoBehaviour
 {
@@ -45,8 +46,9 @@ public class MapGenerator_meu : MonoBehaviour
 
     int[,] mapFloodFill;
     int[,] mapStatus;
+    Vector3[,] mapPositions;
+
     List<Vector3> position = new List<Vector3>();
-    List<int> statusPosition = new List<int>();
 
     List<Vector3> soldierCount = new List<Vector3>();
 
@@ -72,7 +74,7 @@ public class MapGenerator_meu : MonoBehaviour
     {
         if (Input.GetKeyDown("t"))
         {
-            GetPositionRover();
+            DistanciaMaisCurta();
         }
     }
 
@@ -91,6 +93,9 @@ public class MapGenerator_meu : MonoBehaviour
     void GenerateMap()
     {
         map = new int[width, height];
+        mapStatus = new int[width, height];
+        mapPositions = new Vector3[width, height];
+
         RandomFillMap();
 
         for (int i = 0; i < 5; i++)
@@ -204,8 +209,11 @@ public class MapGenerator_meu : MonoBehaviour
                     Vector3 pos = new Vector3(-width / 2 + x + 0.5f, 0.0f, -height / 2 + y + 0.5f);
                     Quaternion rot = new Quaternion(0, 0, 0, 1);
 
+                    mapPositions[x, y] = new Vector3(pos.x + 100, 0.1f, pos.z + 100);
+
                     if (map[x, y] == 1)
                     {
+
                         GameObject newBloco;
 
                         if (x > 0 && x < width - 1 && y > 0 && y < height - 1)
@@ -296,18 +304,28 @@ public class MapGenerator_meu : MonoBehaviour
         }
 
         //numero conforme o que esta na posição
-        // 0 -> chao normal
-        // 1 -> chao alagado
-        // 3 -> soldado       
+        // 1 -> chao normal
+        // 2 -> chao alagado    
 
         //inicia a distribuição dos objetos de cena
         if(numCicle >= 2000)
         {
-            //mapStatus = mapFloodFill;
+            mapStatus = mapFloodFill;
 
-            for(int i = 0; i < position.Count; i++)
+            for(int gridX = 0; gridX < width; gridX++)
             {
-                statusPosition.Add(UnityEngine.Random.Range(0, 3));
+                for (int gridY = 0; gridY < height; gridY++)
+                {
+                    if(mapStatus[gridX, gridY] == 2) //se for considerado uma área possível
+                    {
+                        //coloca um custo no chao entre 1 e 2
+                        mapStatus[gridX, gridY] = UnityEngine.Random.Range(1, 3);
+                    }
+                    else //paredes e áreas inalcansáveis
+                    {
+                        mapStatus[gridX, gridY] = 10;
+                    }
+                }              
             }
 
             flood = true;
@@ -380,7 +398,7 @@ public class MapGenerator_meu : MonoBehaviour
                     {
                         Instantiate(GameManager.Instance.soldier, position[i], rot);
                         //atualiza a lista que nessa posição tem um soldado
-                        statusPosition[i] = 3;
+                        //statusPosition[i] = 3;
                         soldierCount.Add(position[i]);
                     }
                 }
@@ -411,6 +429,8 @@ public class MapGenerator_meu : MonoBehaviour
 
                 GameManager.Instance.StartNumberSoldier();
             }
+
+            GetPositionRover();
         }
         else
         {
@@ -427,56 +447,28 @@ public class MapGenerator_meu : MonoBehaviour
             ptsx.Clear();
             ptsy.Clear();
         }
-
-
-        //temporario
-        //print(statusPosition.Count);
-        //Quaternion tempRot = new Quaternion(0, 0, 0, 1);
-        //for (int i = 0; i < position.Count; i++)
-        //{
-        //    if(statusPosition[i] == 0)
-        //        Instantiate(tile0, position[i], tempRot);
-        //    if (statusPosition[i] == 1)
-        //        Instantiate(tile1, position[i], tempRot);
-        //}
     }
 
     private void GetPositionRover()
     {
-        stayLoop = false;
-        int _count = 0;
-        
-        float p_x = roverPosition.position.x;
-        float p_z = roverPosition.position.z;
+        MainClass.AddDraph(mapPositions, mapStatus, width);
+    }
 
-        print("Rover X: " + p_x + " / Rover Z: " + p_z);
+    private void DistanciaMaisCurta()
+    {
+        Vector3 _rover = roverPosition.position;
+        _rover.x += 100;
+        _rover.z += 100;
+        Vector3 _soldirProximity = soldierCount[0];
+        _soldirProximity.x += 100;
+        _soldirProximity.z += 100;
 
-        for(int i = 0; i < soldierCount.Count; i++)
+        List<Vector3> caminho = new List<Vector3>();
+        caminho = MainClass.GetPath(_rover, _soldirProximity);
+
+        for(int i = 0; i < caminho.Count; i++)
         {
-            print("Rover Soldado " + i  + " posX: " + soldierCount[i].x + " / Rover Soldado " + i + " posZ: " + soldierCount[i].z);
+            print(caminho[i]);
         }
-
-        //while (!stayLoop)
-        //{
-        //    if(_count < numCicle)
-        //    {
-        //        Vector3 p_vector = position[_count];
-
-        //        float diferencaX = p_vector.x - roverPosition.position.x;
-        //        float diferencaz = p_vector.z - roverPosition.position.z;
-
-        //        if (diferencaX <= 1 && diferencaz <= 1)
-        //        {
-        //            Instantiate(tile0, position[_count], new Quaternion(0, 0, 0, 1));
-        //            print("Pos X: " + position[_count].x + " / Pos Z: " + position[_count].z);
-        //            stayLoop = true;
-        //        }
-        //        _count++;
-        //    }
-        //    else
-        //    {
-        //        stayLoop = true;
-        //    }
-        //}
     }
 }
