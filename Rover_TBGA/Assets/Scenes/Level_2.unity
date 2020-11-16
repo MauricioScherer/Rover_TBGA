@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: updateRate
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7506580717988694808, guid: b1241b800cf8fa14fa38ee9351d2021d, type: 3}
+      propertyPath: ciclesRate
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 7506580717988694809, guid: b1241b800cf8fa14fa38ee9351d2021d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -9,6 +9,8 @@ public class GameOfLife : MonoBehaviour
     public bool start = true;
     public bool smooth = false;
     [Range(0.00001f, 3f)] public float updateRate  = 0.1f;
+    [Range(50, 500)] public int ciclesRate = 500;
+    public int cicles = 0;
 
     GameObject cell;
 
@@ -32,7 +34,6 @@ public class GameOfLife : MonoBehaviour
     private int[,] states;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         gridSizeX = mapGenerator.width;
@@ -57,17 +58,10 @@ public class GameOfLife : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (cicles > ciclesRate)
         {
-            start = start ? false : true;
-            if (start)
-            {
-                InvokeRepeating("UpdateStates", 0.1f, updateRate);
-            }
-            else
-            {
-                CancelInvoke("UpdateStates");
-            }
+            RandomizeGrid();
+            cicles = 0;
         }
     }
 
@@ -141,6 +135,8 @@ public class GameOfLife : MonoBehaviour
                 cells[x, y].SetState(states[x, y]);
             }
         }
+
+        cicles++;
     }
 
     int GetLivingNeighbours(int x, int y)
