@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: updateRate
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7506580717988694808, guid: b1241b800cf8fa14fa38ee9351d2021d, type: 3}
+      propertyPath: ciclesRate
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 7506580717988694809, guid: b1241b800cf8fa14fa38ee9351d2021d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -548,6 +552,10 @@ PrefabInstance:
       propertyPath: tile1
       value: 
       objectReference: {fileID: 640966406042426054, guid: e6a9e03c2529fb148afb0afcbe72bc38, type: 3}
+    - target: {fileID: 1542590764167144883, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
+      propertyPath: useRandomSeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ef47067b3bae745b7a5d2b07f3dfe5, type: 3}
 --- !u!114 &687439966 stripped
