@@ -6,6 +6,8 @@ public class NeblineScript : MonoBehaviour
 {
     public Generator generator;
     public GameOfLife gameOfLife;
+    public int numberOfEvents;
+    private int count = 0;
 
     private void Start()
     {
@@ -14,26 +16,25 @@ public class NeblineScript : MonoBehaviour
 
     private IEnumerator Event()
     {
-        gameOfLife.Nebline();
-        Debug.Log("ATIVO");
+        do
+        {
+            Debug.Log("Event: " + count + " / " + numberOfEvents);
 
-        float time = generator.Uniform(10, 50);
-        Debug.Log("TIME: " + time);
+            gameOfLife.Nebline();
+            Debug.Log("NEBLINE ACTIVED");
 
-        yield return new WaitForSeconds(time);
+            float time = generator.Normal(60, 1);
+            Debug.Log("Time: " + time);
 
-        gameOfLife.Dissipate();
+            yield return new WaitForSeconds(time);
 
-        time = generator.Exponential(30);
-        Debug.Log("TIME: " + time);
+            gameOfLife.Dissipate();
+            Debug.Log("DISSIPATE..");
 
-        yield return new WaitForSeconds(time);
-        
-        ContinueRoutine();
-    }
+            yield return new WaitForSeconds(time);
 
-    private void ContinueRoutine()
-    {
-        StartCoroutine(Event());
+            count++;
+
+        } while (count < numberOfEvents);
     }
 }

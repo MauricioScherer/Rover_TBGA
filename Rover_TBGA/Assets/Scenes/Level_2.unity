@@ -476,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generator: {fileID: 579079788}
   gameOfLife: {fileID: 579079786}
+  numberOfEvents: 5
 --- !u!114 &579079786 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7506580717988694808, guid: b1241b800cf8fa14fa38ee9351d2021d, type: 3}
