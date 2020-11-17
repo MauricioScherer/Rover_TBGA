@@ -18,6 +18,11 @@ public class CellOfLife : MonoBehaviour
         gridSizeY = GameObject.FindGameObjectWithTag("GameOfLife").GetComponent<GameOfLife>().Y;
     }
 
+    private void Update()
+    {
+        ChangeColour();
+    }
+
     public void CreateCell(int[] pos, Sprite newSpr)
     {
         state = 0;
@@ -34,7 +39,6 @@ public class CellOfLife : MonoBehaviour
     public void SetState(int newStatus)
     {
         state = newStatus;
-        ChangeColour();
     }
 
     void SetSprite(Sprite newSpr)
@@ -53,13 +57,13 @@ public class CellOfLife : MonoBehaviour
     {
         if (state == 1)
         {
-            age += 0.01f;
+            age += 0.02f;
             if (age > 1) age = 1;
             sprRend.color = new Color(255, 255, 255, age);
         }
         else
         {
-            age -= 0.003f;
+            age -= 0.005f;
             if (age < 0) age = 0;
             sprRend.color = new Color(255, 255, 255, age);
         }   
