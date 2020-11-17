@@ -5,17 +5,19 @@ using UnityEngine;
 public class GameOfLife : MonoBehaviour
 {
     public MapGenerator_meu mapGenerator;
+    [Range(0.00001f, 3f)] public float updateRate  = 0.1f;
+    [Range(50, 500)] public int ciclesRate = 500;
+
     public bool randomizeAtStart = false;
     public bool start = true;
     public bool smooth = false;
-    [Range(0.00001f, 3f)] public float updateRate  = 0.1f;
-    [Range(50, 500)] public int ciclesRate = 500;
-    public int cicles = 0;
 
-    GameObject cell;
-
-   [Space]
+    [Space]
     public Sprite tile;
+    [Space]
+
+    [SerializeField] private int cicles = 0;
+    private GameObject cell;
 
     public int X
     {
@@ -34,7 +36,7 @@ public class GameOfLife : MonoBehaviour
     private int[,] states;
 
 
-    void Start()
+    private void Start()
     {
         gridSizeX = mapGenerator.width;
         gridSizeY = mapGenerator.height;
@@ -58,10 +60,13 @@ public class GameOfLife : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (cicles > ciclesRate)
+        if (start)
         {
-            RandomizeGrid();
-            cicles = 0;
+            if (cicles > ciclesRate)
+            {
+                RandomizeGrid();
+                cicles = 0;
+            }
         }
     }
 
@@ -80,7 +85,7 @@ public class GameOfLife : MonoBehaviour
         }
     }
 
-    void RandomizeGrid()
+    public void RandomizeGrid()
     {
         for (int x = 0; x < gridSizeX; x++)
         {
@@ -92,7 +97,7 @@ public class GameOfLife : MonoBehaviour
         }
     }
 
-    void UpdateStates()
+    public void UpdateStates()
     {
        //Loop para pegar o grid
         for (int x = 0; x < gridSizeX; x++)
@@ -139,7 +144,7 @@ public class GameOfLife : MonoBehaviour
         cicles++;
     }
 
-    int GetLivingNeighbours(int x, int y)
+    public int GetLivingNeighbours(int x, int y)
     {
         int count = 0;
 
@@ -164,5 +169,26 @@ public class GameOfLife : MonoBehaviour
         count -= cells[x, y].state;
 
         return count;
+    }
+
+    public void Nebline()
+    {
+        InvokeRepeating("UpdateStates", 0.1f, updateRate);
+        start = true;
+    }
+
+    public void Dissipate()
+    {
+        CancelInvoke();
+        start = false;
+
+        //Loop para pegar o grid
+        for (int x = 0; x < gridSizeX; x++)
+        {
+            for (int y = 0; y < gridSizeY; y++)
+            {
+                cells[x, y].state = 0;
+            }
+        }
     }
 }
